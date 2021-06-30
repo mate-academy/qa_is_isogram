@@ -12,7 +12,7 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should be case sensitive`, () => {
-    expect(isIsogram(`MAtE`)).toBe(true);
+    expect(isIsogram('Dad')).toBe(false);
   });
 
   it(`should return 'true' value if input is ''`, () => {
