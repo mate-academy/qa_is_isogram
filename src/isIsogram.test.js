@@ -28,4 +28,9 @@ describe(`Function 'isIsogram':`, () => {
   it(`should return true if the input string is empty`, () => {
     expect(isIsogram('')).toBeTruthy();
   });
+
+  it(`should return true for a non-empty
+  input string wich is an isogram`, () => {
+    expect(isIsogram('Kate')).toBeTruthy();
+  });
 });
