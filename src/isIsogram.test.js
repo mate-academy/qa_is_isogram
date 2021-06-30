@@ -8,12 +8,24 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('playgrounds')).toBe('boolean');
   });
 
   it(`should be case sensitive`, () => {
+    const result = isIsogram('wOod');
 
+    expect(result).toBe(false);
   });
 
-  // write more tests here
+  it(`should return true if word is empty`, () => {
+    const result = isIsogram('');
+
+    expect(result).toBe(true);
+  });
+
+  it(`should return true if word = 'forest'`, () => {
+    const result = isIsogram('forest');
+
+    expect(result).toBe(true);
+  });
 });
