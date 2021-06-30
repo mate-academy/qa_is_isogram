@@ -8,12 +8,24 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('word')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`should return 'true' if string is blank`, () => {
+    expect(isIsogram('')).toBe(true);
   });
 
-  // write more tests here
+  it(`should not be case sensitive`, () => {
+    expect(isIsogram('WORD')).toBe(true);
+  });
+
+  it(`should return 'false' if string has duplicated symbols`,
+    () => {
+      expect(isIsogram('Wood')).toBe(false);
+    });
+
+  it(`should compare similar by writing cyrillic and latin symbols 
+    as duplicates`, () => {
+    expect(isIsogram('аудіювання')).toBe(false);
+  });
 });
