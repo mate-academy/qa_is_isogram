@@ -8,12 +8,30 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('Onetwotest')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
+  const checkIfSensitive = {
+    upperCase: 'A',
+    lowerCase: 'a',
+  };
 
+  describe('the checkIfSensitive', () => {
+    test(`should return a boolean`, () => {
+      expect(checkIfSensitive.upperCase
+        !== checkIfSensitive.lowerCase).toBeTruthy();
+    });
   });
 
-  // write more tests here
+  it(`the empty string is an isogram`, () => {
+    expect(isIsogram('')).toBe(true);
+  });
+
+  it(`input: 'playgrounds' should return true`, () => {
+    expect(isIsogram('playgrounds')).toBe(true);
+  });
+
+  it(`input: 'look' should return true`, () => {
+    expect(isIsogram('look')).toBeFalsy();
+  });
 });
