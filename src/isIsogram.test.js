@@ -23,7 +23,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(result).toBe(true);
   });
 
-  it(`should be return true if word is empty`, () => {
+  it(`should be return true if word = 'forest'`, () => {
     const result = isIsogram('forest');
 
     expect(result).toBe(true);
