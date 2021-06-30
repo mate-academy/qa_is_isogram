@@ -21,7 +21,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('')).toBeTruthy();
   });
 
-  it(`should return true if string non-repeating consecutive letters`, () => {
+  it(`should return true if string contains non-repeating letters`, () => {
     expect(isIsogram('playgrounds')).toBeTruthy();
   });
 });
