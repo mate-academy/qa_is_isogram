@@ -7,13 +7,33 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it(`should return a boolean`, () => {
-
+  it(`should return a 'boolean'`, () => {
+    expect(typeof isIsogram(''))
+      .toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`should not be case sensitive`, () => {
+    expect(isIsogram('MATE'))
+      .toBe(true);
   });
 
-  // write more tests here
+  it(`should rate an empty string '' as isogram`, () => {
+    expect(isIsogram(''))
+      .toBe(true);
+  });
+
+  it(`should return 'true' if word has no repeating letters`, () => {
+    expect(isIsogram('IndeX'))
+      .toBe(true);
+  });
+
+  it(`should return 'false' if word has consecutive repeating letters`, () => {
+    expect(isIsogram('Maate'))
+      .toBe(false);
+  });
+
+  it(`should return 'false' if word has repeating letters at all`, () => {
+    expect(isIsogram('matea'))
+      .toBe(false);
+  });
 });
