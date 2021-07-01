@@ -8,9 +8,9 @@ Notes:
 
 Examples:
 ```js
-isIsogram('playgrounds') === true
+isIsogram('flatron') === true
 isIsogram('look') === false
-isIsogram('Adam') === false 
+isIsogram('Adam') === false
 isIsogram('') === true
 ```
 
