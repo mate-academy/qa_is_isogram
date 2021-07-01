@@ -26,4 +26,8 @@ describe(`Function 'isIsogram':`, () => {
   it(`empty string should be isogram`, () => {
     expect(isIsogram('')).toBe(true);
   });
+
+  it(`valid string should be isogram`, () => {
+    expect(isIsogram('playwithme')).toBe(true);
+  });
 });
