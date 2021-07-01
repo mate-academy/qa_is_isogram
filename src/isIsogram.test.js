@@ -12,7 +12,7 @@ describe(`Function 'isIsogram':`, () => {
       .toBeFalsy();
   });
 
-  it(`should be case sensitive`, () => {
+  it(`should be not case sensitive`, () => {
     expect(isIsogram('Hoh'))
       .toBeFalsy();
   });
