@@ -12,7 +12,7 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should not be case sensitive`, () => {
-    expect(isIsogram('MaTe')).toBeTruthy();
+    expect(isIsogram('MatEe')).toBeFalsy();
   });
 
   it(`should return false if repeated characters are in diff register`, () => {
