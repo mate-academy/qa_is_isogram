@@ -8,12 +8,27 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(isIsogram('hoome'))
+      .toBeFalsy();
   });
 
   it(`should be case sensitive`, () => {
-
+    expect(isIsogram('Hoh'))
+      .toBeFalsy();
   });
 
-  // write more tests here
+  it(`should be true when input is 'playgrounds'`, () => {
+    expect(isIsogram('playgrounds'))
+      .toEqual(true);
+  });
+
+  it(`should be true when input is ''`, () => {
+    expect(isIsogram(''))
+      .toEqual(true);
+  });
+
+  it(`should be false when input is 'look'`, () => {
+    expect(isIsogram('look'))
+      .toEqual(false);
+  });
 });
