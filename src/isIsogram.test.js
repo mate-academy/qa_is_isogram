@@ -12,7 +12,7 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should be case sensitive`, () => {
-    expect(isIsogram('Apple')).toBe(false);
+    expect(isIsogram('CAR')).toBe(true);
   });
 
   // write more tests here
