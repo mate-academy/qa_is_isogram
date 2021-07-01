@@ -15,6 +15,14 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('WORD')).toBe(true);
   });
 
+  it(`should accept mixed register`, () => {
+    expect(isIsogram('Ira')).toBe(true);
+  });
+
+  it(`should accept mixed register`, () => {
+    expect(isIsogram('Alina')).toBe(false);
+  });
+
   it(`should accept an empty string`, () => {
     expect(isIsogram('')).toBe(true);
   });
@@ -23,7 +31,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('room')).toBe(false);
   });
 
-  it(`should not accept double letter`, () => {
+  it(`should not accept repeating letters`, () => {
     expect(isIsogram('lolipop')).toBe(false);
   });
 });
