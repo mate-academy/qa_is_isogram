@@ -11,12 +11,12 @@ describe(`Function 'isIsogram':`, () => {
     expect(typeof isIsogram('word')).toBe('boolean');
   });
 
-  it(`empty strig is an isogram`, () => {
-    expect(isIsogram(' ')).toBe(true);
+  it(`empty string is an isogram`, () => {
+    expect(isIsogram('')).toBe(true);
   });
 
   it(`should NOT be case sensitive`, () => {
-    expect(isIsogram('Man')).toBe(true);
+    expect(isIsogram('Bob')).toBe(false);
   });
 
   it(`should return false is word is NOT an isogram`, () => {
