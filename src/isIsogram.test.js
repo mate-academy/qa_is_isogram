@@ -8,12 +8,23 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`should not be case sensitive`, () => {
+    expect(isIsogram('MmNn')).toBeFalsy();
   });
 
-  // write more tests here
+  it(`should return 'true' if word = 'Palindrom'`, () => {
+    expect(isIsogram('Palindrom')).toBeTruthy();
+  });
+
+  it(`should return 'true' if word = ''`, () => {
+    expect(isIsogram('')).toBeTruthy();
+  });
+
+  it(`should return 'false' if letters 
+  are no unique: word = 'look'`, () => {
+    expect(isIsogram('look')).toBeFalsy();
+  });
 });
