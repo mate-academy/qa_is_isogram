@@ -8,12 +8,26 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('kaw')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`should not be case sensitive`, () => {
+    expect(isIsogram('kawK')).toBe(false);
   });
 
-  // write more tests here
+  it(`should check one letter`, () => {
+    expect(isIsogram('k')).toBe(true);
+  });
+
+  it(`should detect consecutive repetitions`, () => {
+    expect(isIsogram('kawW')).toBe(false);
+  });
+
+  it(`empty string should be isogram`, () => {
+    expect(isIsogram('')).toBe(true);
+  });
+
+  it(`valid string should be isogram`, () => {
+    expect(isIsogram('playwithme')).toBe(true);
+  });
 });
