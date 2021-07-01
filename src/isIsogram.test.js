@@ -11,7 +11,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(typeof isIsogram('word')).toBe('boolean');
   });
 
-  it(`empty strig is an isogram`, () => {
+  it(`empty string is an isogram`, () => {
     expect(isIsogram(' ')).toBe(true);
   });
 
