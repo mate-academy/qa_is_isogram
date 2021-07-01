@@ -8,22 +8,15 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-    const checkBoolean = isIsogram('');
-
-    expect(typeof checkBoolean === 'boolean').toBeTruthy();
+    expect(typeof isIsogram('')).toBe('boolean');
   });
 
   it(`should not be case sensitive`, () => {
     expect(isIsogram('MmNn')).toBeFalsy();
   });
 
-  it(`should return 'true' if word = '123'`, () => {
-    expect(isIsogram('123')).toBeTruthy();
-  });
-
-  it(`should return 'false' if numbers are not 
-  unique: word = '333'`, () => {
-    expect(isIsogram('333')).toBeFalsy();
+  it(`should return 'true' if word = 'Palindrom'`, () => {
+    expect(isIsogram('Palindrom')).toBeTruthy();
   });
 
   it(`should return 'true' if word = ''`, () => {
