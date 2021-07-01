@@ -8,12 +8,28 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('lp')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`should not be case sensitive`, () => {
+    expect(isIsogram('mAlan')).toBe(false);
   });
 
-  // write more tests here
+  it(`should return 'true' if string is blank`, () => {
+    expect(isIsogram('')).toBe(true);
+  });
+
+  it(`should return 'false' if string is not isogram 
+  and the repeating letters are arranged in a row`, () => {
+    expect(isIsogram('bluue')).toBe(false);
+  });
+
+  it(`should return 'false' if string is not isogram 
+  and the repeating letters are not arranged in a row`, () => {
+    expect(isIsogram('blueu')).toBe(false);
+  });
+
+  it(`should return 'true' if string is isogram`, () => {
+    expect(isIsogram('asdfg')).toBe(true);
+  });
 });
