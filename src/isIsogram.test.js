@@ -17,19 +17,19 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('Word')).toBe(true);
   });
 
-  it(`should be not case sensitive`, () => {
+  it(`should return true if empty string in isSogram`, () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it(`should be not case sensitive`, () => {
+  it(`should be case sensitive`, () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 
-  it(`should be not case sensitive`, () => {
+  it(`should return true if word has no repeating letters`, () => {
     expect(isIsogram('flatron')).toBe(true);
   });
 
-  it(`should be not case sensitive`, () => {
+  it(`should return true if word has one space`, () => {
     expect(isIsogram('fas tir')).toBe(true);
   });
 });
