@@ -7,13 +7,25 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it(`should return a boolean`, () => {
-
+  it(`should return a boolean result`, () => {
+    expect(typeof isIsogram('boolean')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`shouldn't be case sensitive`, () => {
+    expect(isIsogram('Hi')).toBe(true);
   });
 
-  // write more tests here
+  it(`should return 'true' on empty string`, () => {
+    expect(isIsogram('')).toBe(true);
+  });
+
+  it(`should return 'false' on word with 
+    identical different case letters`, () => {
+    expect(isIsogram('Wow')).toBe(false);
+  });
+
+  it(`should return 'false' on word with 
+    identical letters(is not isogram)`, () => {
+    expect(isIsogram('look')).toBe(false);
+  });
 });
