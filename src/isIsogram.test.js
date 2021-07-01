@@ -8,12 +8,24 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('word')).toBe('boolean');
   });
 
   it(`should be case sensitive`, () => {
-
+    expect(isIsogram('Sister')).toBe(false);
   });
 
-  // write more tests here
+  it(`should return true if  a word has no repeating letters, 
+  consecutive or non-consecutive`, () => {
+    expect(isIsogram('Hi')).toBe(true);
+  });
+
+  it(`should return true if string is empty`, () => {
+    expect(isIsogram('')).toBe(true);
+  });
+
+  it(`should return false if word has repeating letters, 
+  consecutive or non-consecutive.`, () => {
+    expect(isIsogram('Hello')).toBe(false);
+  });
 });
