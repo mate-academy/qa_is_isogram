@@ -12,7 +12,7 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should be case sensitive`, () => {
-    expect(isIsogram('book')).toBeFalsy();
+    expect(isIsogram('Book')).toBeFalsy();
   });
 
   it(`should return true if string is empty`, () => {
