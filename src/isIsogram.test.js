@@ -12,7 +12,7 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should not be case sensitive`, () => {
-    expect(isIsogram('DOGE')).toBe(true);
+    expect(isIsogram('DdOGE')).toBe(true);
   });
 
   it(`should have unique letters `, () => {
