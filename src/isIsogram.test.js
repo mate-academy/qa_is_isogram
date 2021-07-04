@@ -19,10 +19,6 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('')).toBeTruthy();
   });
 
-  it(`should work with both letters and numbers`, () => {
-    expect(isIsogram('KeY453534')).toBeFalsy();
-  });
-
   it(`should return 'true' if 'Omit' is used`, () => {
     expect(isIsogram('Omit')).toBe(true);
   });
