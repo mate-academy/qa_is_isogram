@@ -11,10 +11,6 @@ describe(`Function 'isIsogram':`, () => {
     expect(typeof isIsogram('word')).toBe('boolean');
   });
 
-  it(`should not be case sensitive`, () => {
-    expect(isIsogram('WoRd')).toBeTruthy();
-  });
-
   it(`should return 'true' if the string is empty`, () => {
     expect(isIsogram('')).toBeTruthy();
   });
