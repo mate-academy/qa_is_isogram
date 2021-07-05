@@ -22,4 +22,8 @@ describe(`Function 'isIsogram':`, () => {
   it(`should return 'false' if 'deterrent' is used`, () => {
     expect(isIsogram('deterrent')).toBe(false);
   });
+
+  it(`should not be case sensitive`, () => {
+    expect(isIsogram('aPple')).toBeFalsy();
+  });
 });
