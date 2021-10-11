@@ -8,12 +8,33 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('text')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`should return 'false' if the string contains 
+  the same characters with different cases`, () => {
+    expect(isIsogram('Adam')).toBe(false);
   });
 
-  // write more tests here
+  it(`should return 'true' when input value ' '`, () => {
+    expect(isIsogram(' ')).toBe(true);
+  });
+
+  it(`should return 'false' if the same characters aren't 
+  next to each other`, () => {
+    expect(isIsogram('adam')).toBe(false);
+  });
+
+  it(`should return 'false' if the same characters are 
+  next to each other`, () => {
+    expect(isIsogram('look')).toBe(false);
+  });
+
+  it(`should return 'false' when input is 'AaBbCc'`, () => {
+    expect(isIsogram('AaBbCc')).toBe(false);
+  });
+
+  it(`should return 'true' when input is 'AbC'`, () => {
+    expect(isIsogram('AbC')).toBe(true);
+  });
 });
