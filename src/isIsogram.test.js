@@ -29,4 +29,12 @@ describe(`Function 'isIsogram':`, () => {
   next to each other`, () => {
     expect(isIsogram('look')).toBe(false);
   });
+
+  it(`should return 'false' when input is 'AaBbCc'`, () => {
+    expect(isIsogram('AaBbCc')).toBe(false);
+  });
+
+  it(`should return 'true' when input is 'AbC'`, () => {
+    expect(isIsogram('AbC')).toBe(false);
+  });
 });
