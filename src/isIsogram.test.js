@@ -35,6 +35,6 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return 'true' when input is 'AbC'`, () => {
-    expect(isIsogram('AbC')).toBe(false);
+    expect(isIsogram('AbC')).toBe(true);
   });
 });
