@@ -8,12 +8,26 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('iryna')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`should not be case sensitive`, () => {
+    expect(isIsogram('Iryna')).toBe(true);
   });
 
-  // write more tests here
+  it(`empty string is isogram`, () => {
+    expect(isIsogram('')).toBe(true);
+  });
+
+  it(`should not contains 2 similar letters`, () => {
+    expect(isIsogram('Adam')).toBe(false);
+  });
+
+  it(`cannot contain two identical letters`, () => {
+    expect(isIsogram('look')).toBe(false);
+  });
+
+  it(`cannot contain two identical letters despite the case`, () => {
+    expect(isIsogram('Adam')).toBe(false);
+  });
 });
