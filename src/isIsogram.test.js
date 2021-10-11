@@ -11,8 +11,8 @@ describe(`Function 'isIsogram':`, () => {
     expect(typeof isIsogram('text')).toBe('boolean');
   });
 
-  it(`should not be case sensitive 
-  (M and m are considered the same letter)`, () => {
+  it(`should return 'false' if the string contains 
+  the same characters with different cases`, () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 
@@ -20,7 +20,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram(' ')).toBe(true);
   });
 
-  it(`should return 'false' if the same characters aren't 
+  it(`should return 'false' 'false' aren't 
   next to each other`, () => {
     expect(isIsogram('adam')).toBe(false);
   });
