@@ -25,7 +25,7 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return 'false' when 
-  input word that has no repeating letters '')`, () => {
+  input word that has repeating letters '')`, () => {
     expect(isIsogram('look')).toEqual(false);
   });
 });
