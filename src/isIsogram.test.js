@@ -8,12 +8,24 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('playgrounds')).toBe('boolean');
   });
 
   it(`should be case sensitive`, () => {
-
+    expect(isIsogram('loOk')).toEqual(false);
   });
 
-  // write more tests here
+  it(`should return 'true' when input is '')`, () => {
+    expect(isIsogram('')).toEqual(true);
+  });
+
+  it(`should return 'true' when 
+  input word that has no repeating letters `, () => {
+    expect(isIsogram('playgrounds')).toEqual(true);
+  });
+
+  it(`should return 'false' when 
+  input word that has no repeating letters '')`, () => {
+    expect(isIsogram('look')).toEqual(false);
+  });
 });
