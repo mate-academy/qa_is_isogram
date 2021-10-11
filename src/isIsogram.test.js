@@ -29,6 +29,6 @@ describe(`Function 'isIsogram':`, () => {
     });
 
   it(`must return 'true' if there are no identical letters in the word`, () => {
-    expect(isIsogram('party')).toBeTruthy();
+    expect(isIsogram('clear')).toBeTruthy();
   });
 });
