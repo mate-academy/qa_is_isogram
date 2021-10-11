@@ -8,7 +8,7 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-    expect(typeof isIsogram).toBeTruthy();
+    expect(typeof isIsogram('abc')).toBe('boolean');
   });
 
   it(`should be case sensitive`, () => {
