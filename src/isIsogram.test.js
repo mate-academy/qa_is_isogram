@@ -20,7 +20,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram(' ')).toBe(true);
   });
 
-  it(`should return 'false' 'false' aren't 
+  it(`should return 'false' if the same characters aren't 
   next to each other`, () => {
     expect(isIsogram('adam')).toBe(false);
   });
