@@ -8,12 +8,26 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(isIsogram).toBeTruthy();
   });
 
   it(`should be case sensitive`, () => {
-
+    expect(isIsogram('Adam')).toBeFalsy();
   });
 
-  // write more tests here
+  it(`should be case sensitive`, () => {
+    expect(isIsogram('playgrounds')).toBeTruthy();
+  });
+
+  it(`should be case sensitive`, () => {
+    expect(isIsogram('Chemistry')).toBeTruthy();
+  });
+
+  it(`should be case sensitive`, () => {
+    expect(isIsogram('look')).toBeFalsy();
+  });
+
+  it(`should be case sensitive`, () => {
+    expect(isIsogram('')).toBeTruthy();
+  });
 });
