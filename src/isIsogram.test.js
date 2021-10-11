@@ -15,20 +15,19 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('PlayGround')).toBeTruthy();
   });
 
-  it(`should return false with similar letters`, () => {
+  it(`should return false when input is 'look'`, () => {
     expect(isIsogram('look')).toBeFalsy();
   });
 
-  it(`should return false with similar letters in differnt
-  cases`, () => {
+  it(`should return false when input is 'LookAdam'`, () => {
     expect(isIsogram('LookAdam')).toBeFalsy();
   });
 
-  it(`should return true with different letters`, () => {
+  it(`should return true when input is 'abcdefj'`, () => {
     expect(isIsogram('abcdefj')).toBeTruthy();
   });
 
-  it(`should return true empty value`, () => {
+  it(`should return true when input is ''`, () => {
     expect(isIsogram('')).toBeTruthy();
   });
 });
