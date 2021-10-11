@@ -11,11 +11,11 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram).toBeTruthy();
   });
 
-  it(`should be case sensitive`, () => {
+  it(`should return an isogram`, () => {
     expect(isIsogram('Adam')).toBeFalsy();
   });
 
-  it(`should be case sensitive`, () => {
+  it(`should return an isogram`, () => {
     expect(isIsogram('playgrounds')).toBeTruthy();
   });
 
@@ -23,7 +23,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('Chemistry')).toBeTruthy();
   });
 
-  it(`should be case sensitive`, () => {
+  it(`should return an isogram`, () => {
     expect(isIsogram('look')).toBeFalsy();
   });
 
