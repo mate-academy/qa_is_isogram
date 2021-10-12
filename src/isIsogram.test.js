@@ -11,11 +11,11 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram).toBeTruthy();
   });
 
-  it(`should return an isogram`, () => {
+  it(`should return 'false' for string is not an isogram`, () => {
     expect(isIsogram('Adam')).toBeFalsy();
   });
 
-  it(`should return an isogram`, () => {
+  it(`should return 'true' for string is an isogram`, () => {
     expect(isIsogram('Chemistry')).toBeTruthy();
   });
 
