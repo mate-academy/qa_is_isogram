@@ -10,7 +10,8 @@ describe(`Function 'isIsogram':`, () => {
   it(`should return a boolean`, () => {
     const result = isIsogram('');
 
-    expect(`${result}`).toMatch(/[null|true|false]/);
+    expect(typeof result).toBe('boolean');
+    //   expect(`${result}`).toMatch(/[null|true|false]/);
   });
 
   it(`should be be case sensitive`, () => {
@@ -22,5 +23,9 @@ describe(`Function 'isIsogram':`, () => {
     const result = isIsogram('');
 
     expect(result).toEqual(true);
+  });
+
+  it(`"MotlyCrew" should be isogram`, () => {
+    expect(isIsogram('MotlyCrew')).toEqual(true);
   });
 });
