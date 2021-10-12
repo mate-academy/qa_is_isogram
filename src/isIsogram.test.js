@@ -19,7 +19,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('Chemistry')).toBeTruthy();
   });
 
-  it(`should be case sensitive`, () => {
+  it(`should return 'true' for empty string`, () => {
     expect(isIsogram('')).toBeTruthy();
   });
 });
