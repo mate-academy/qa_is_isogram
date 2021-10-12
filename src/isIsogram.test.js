@@ -15,16 +15,8 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('Adam')).toBeFalsy();
   });
 
-  it(`should return an isogram`, () => {
-    expect(isIsogram('playgrounds')).toBeTruthy();
-  });
-
   it(`should be case sensitive`, () => {
     expect(isIsogram('Chemistry')).toBeTruthy();
-  });
-
-  it(`should return an isogram`, () => {
-    expect(isIsogram('look')).toBeFalsy();
   });
 
   it(`should be case sensitive`, () => {
