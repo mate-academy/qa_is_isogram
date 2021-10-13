@@ -24,7 +24,7 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should be case sensitive when input in capital letters`, () => {
-    expect(isIsogram('Abc')).toBe(true);
+    expect(isIsogram('Abca')).toBe(false);
   });
 
   it(`should return 'false' if any match is found`, () => {
