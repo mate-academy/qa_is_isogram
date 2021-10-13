@@ -23,7 +23,7 @@ describe(`Function 'isIsogram':`, () => {
     expect(isIsogram('абв')).toBe(true);
   });
 
-  it(`should be case sensitive when input in capital letters`, () => {
+  it(`should be case insensitive when typed in capital letters`, () => {
     expect(isIsogram('Abca')).toBe(false);
   });
 
