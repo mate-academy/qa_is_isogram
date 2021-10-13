@@ -8,12 +8,30 @@ describe(`Function 'isIsogram':`, () => {
   });
 
   it(`should return a boolean`, () => {
-
+    expect(typeof isIsogram('some string')).toBe('boolean');
   });
 
-  it(`should be case sensitive`, () => {
-
+  it(`should return a 'true' if input ''`, () => {
+    expect(isIsogram('')).toBe(true);
   });
 
-  // write more tests here
+  it(`should accept letters in Latin`, () => {
+    expect(isIsogram('abc')).toBe(true);
+  });
+
+  it(`should accept letters in Cyrillic`, () => {
+    expect(isIsogram('абв')).toBe(true);
+  });
+
+  it(`should be case insensitive when typed in capital letters`, () => {
+    expect(isIsogram('Abca')).toBe(false);
+  });
+
+  it(`should return 'false' if any match is found`, () => {
+    expect(isIsogram('look')).toBe(false);
+  });
+
+  it(`should return 'false' if any match is found`, () => {
+    expect(isIsogram('Adam')).toBe(false);
+  });
 });
