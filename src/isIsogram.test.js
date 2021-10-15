@@ -11,8 +11,8 @@ describe(`Function 'isIsogram':`, () => {
     expect(typeof isIsogram('look')).toEqual('boolean');
   });
 
-  it(`should be not case sensitive`, () => {
-    expect(isIsogram('cAt')).toBe(true);
+  it(`should be case sensitive`, () => {
+    expect(isIsogram('Adam')).toBe(false);
   });
 
   // write more tests here
