@@ -1,16 +1,19 @@
-An isogram is a word that has no repeating letters, consecutive or non-consecutive.
+# QA Is isogram ([uk](readme.uk.md), [ru](readme.ru.md))
+An **isogram** is a word that has no repeating letters, consecutive or
+non-consecutive.
 
-Write a tests for the function `isIsogram` that accepts a string `word` that contains only letters and checks whether this word is an isogram. Function returns `true` if `word` is an isogram, otherwise, return `false`.
+Write a function `isIsogram` that takes a string `word`, that contains only
+letters, and checks whether this word is an **isogram**.
 
 Notes:
-- the empty string is an isogram;
-- function not case sensitive (`M` and `m` are considered the same letter).
+- for this task, the empty string is an **isogram**;
+- function should be case-insensitive (`M` and `m` are considered the same letter).
 
 Examples:
 ```js
 isIsogram('playgrounds') === true
 isIsogram('look') === false
-isIsogram('Adam') === false 
+isIsogram('Adam') === false
 isIsogram('') === true
 ```
 
