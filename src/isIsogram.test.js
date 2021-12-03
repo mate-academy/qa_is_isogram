@@ -1,5 +1,3 @@
-'use strict';
-
 describe('isIsogram', () => {
   const { isIsogram } = require('./isIsogram');
 
