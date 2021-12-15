@@ -15,12 +15,8 @@ describe('isIsogram', () => {
     expect(isIsogram('playgrounds')).toEqual(true);
   });
 
-  it('should be false  when letters the same', () => {
+  it('should be false when letters the same', () => {
     expect(isIsogram('look')).toEqual(false);
-  });
-
-  it('should be true when letters the same', () => {
-    expect(isIsogram('Adam')).toEqual(false);
   });
 
   it('should return true, when letters case-insensitive', () => {
