@@ -3,7 +3,9 @@
  *
  * @returns {boolean}
  */
- function isIsogram(word) {
+'use strict';
+
+function isIsogram(word) {
   const wordToLower = word.toLowerCase();
 
   for (let i = 0; i < wordToLower.length; i++) {
