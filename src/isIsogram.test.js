@@ -11,7 +11,7 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it(`should return true if word hasn't the same letters, like above`, () => {
+  it(`should return true if word hasn't the same letters, like "above"`, () => {
     expect(isIsogram('above')).toBe(true);
   });
 
