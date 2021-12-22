@@ -1,30 +1,34 @@
+'use strict';
+
 describe('isIsogram', () => {
   const { isIsogram } = require('./isIsogram');
 
-  it(`should be declared`, () => {
+  test(`should be declared`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
   it('Should return true with empty string', () => {
     expect(isIsogram(''))
-    .toEqual(true)
-  })
+      .toEqual(true);
+  });
 
-  it('Should return true with empty string', () => {
+  it(`Should return true with string = 'Vlad'`, () => {
     expect(isIsogram('Vlad'))
-    .toEqual(true)
-  })
+      .toEqual(true);
+  });
 
-  it('Should return true with empty string', () => {
+  it('Should return false if string = "Vladislav"', () => {
     expect(isIsogram('Vladislav'))
-    .toEqual(false)
-  })
-  it('Should return true with empty string', () => {
-    expect(isIsogram('Vladislav'))
-    .toEqual(false)
-  })
-  it('Should return true with empty string', () => {
-    expect(isIsogram('1234567890-=qwertyuiop[]asdfghjkl;zxcvbnm,.'))
-    .toEqual(true)
-  })
+      .toEqual(false);
+  });
+
+  it('Should return false if string = "aAnNbB"', () => {
+    expect(isIsogram('aAnNbB'))
+      .toEqual(false);
+  });
+
+  it('Should return true if string has all letters', () => {
+    expect(isIsogram('qwertyuiopasdfghjklzxcvbnm'))
+      .toEqual(true);
+  });
 });
