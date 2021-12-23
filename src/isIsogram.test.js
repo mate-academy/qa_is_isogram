@@ -25,4 +25,10 @@ describe('isIsogram', () => {
     expect(isIsogram('qqwertyuiop'))
       .toEqual(false);
   });
+
+  test(`Function should return false if string
+  has repeating chars in different cases (qQwertyuiop)`, () => {
+    expect(isIsogram('qqwertyuiop'))
+      .toEqual(false);
+  });
 });
