@@ -27,4 +27,11 @@ describe('isIsogram', () => {
     expect(result)
       .toBe(false);
   });
+
+  it(`should return 'true' if word is correct`, () => {
+    const result = isIsogram('Arm');
+
+    expect(result)
+      .toBe(true);
+  });
 });
