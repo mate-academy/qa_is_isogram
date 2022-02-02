@@ -14,7 +14,7 @@ describe('isIsogram', () => {
       .toBe(true);
   });
 
-  it(`should return 'true' when input one letter in two cases`, () => {
+  it(`should return 'false' when input one letter in two cases`, () => {
     const result = isIsogram('Aram');
 
     expect(result)
