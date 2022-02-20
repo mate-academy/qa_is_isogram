@@ -3,6 +3,10 @@
 describe('isIsogram', () => {
   const { isIsogram } = require('./isIsogram');
 
+  it(`should be declared`, () => {
+    expect(isIsogram).toBeInstanceOf(Function);
+  });
+
   it(`checks valid string`, () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
