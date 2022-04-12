@@ -8,7 +8,7 @@ describe('isIsogram', () => {
   });
 
   it(`should return a boolean value`, () => {
-    expect(isIsogram).toBeTruthy();
+    expect(typeof isIsogram('hello')).toBe('boolean');
   });
 
   it(`should return true for word = ''`, () => {
