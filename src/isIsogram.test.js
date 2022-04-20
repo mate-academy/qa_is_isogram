@@ -7,23 +7,23 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it(`should return boolean: 'false' when input value is empty`, () => {
+  it(`should return false' when input value is empty`, () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it(`should return boolean: 'true' when input value is 'playgrounds'`, () => {
+  it(`should return 'true' when input value is 'playgrounds'`, () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
 
-  it(`should return boolean: 'false' when input value is 'look'`, () => {
+  it(`should return 'false' when input value is 'look'`, () => {
     expect(isIsogram('look')).toBe(false);
   });
 
-  it(`should return boolean: 'false' when input value is 'Adam'`, () => {
+  it(`should return 'false' when input value is 'Adam'`, () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 
-  it(`should return boolean: 'true' when input value is 'Ukraine'`, () => {
+  it(`should return 'true' when input value is 'Ukraine'`, () => {
     expect(isIsogram('Ukraine')).toBe(true);
   });
 });
