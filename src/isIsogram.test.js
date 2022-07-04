@@ -27,11 +27,11 @@ describe('isIsogram', () => {
     expect(isIsogram('qwertyuio')).toEqual(true);
   });
 
-  it(`should return false with incorrect input ('aabcde')`, () => {
+  it(`should return false for incorrect input ('aabcde')`, () => {
     expect(isIsogram('aabcde')).toEqual(false);
   });
 
-  it(`should return false with incorrect input ('qwerRtyy')`, () => {
+  it(`should return false for incorrect input ('qwerRtyy')`, () => {
     expect(isIsogram('qwerRtyy')).toEqual(false);
   });
 });
