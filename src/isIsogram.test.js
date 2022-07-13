@@ -8,11 +8,6 @@ describe('isIsogram', () => {
       .toBeInstanceOf(Function);
   });
 
-  test(`should be declared`, () => {
-    expect(isIsogram())
-      .toBeInstanceOf(String);
-  });
-
   test(`Empty string should be an isogram`, () => {
     expect(isIsogram(''))
       .toEqual(true);
@@ -41,5 +36,10 @@ describe('isIsogram', () => {
   test(`One space can be an isogram`, () => {
     expect(isIsogram('abc def'))
       .toEqual(true);
+  });
+
+  test(`Word with repeaded characters can not be an isogram`, () => {
+    expect(isIsogram('Everest'))
+      .toEqual(false);
   });
 });
