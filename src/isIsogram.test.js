@@ -42,4 +42,14 @@ describe('isIsogram', () => {
     expect(isIsogram('Everest'))
       .toEqual(false);
   });
+
+  test(`Repeaded numbers can not be an isogram`, () => {
+    expect(isIsogram('1121'))
+      .toEqual(false);
+  });
+
+  test(`Repeaded special characters can not be an isogram`, () => {
+    expect(isIsogram('@@'))
+      .toEqual(false);
+  });
 });
