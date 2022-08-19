@@ -7,32 +7,22 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it(`the empty string should be an isogram`, () => {
-    expect(isIsogram(' '))
+  it(`should return true when the string is empty`, () => {
+    expect(isIsogram(''))
       .toBeTruthy();
   });
 
-  it(`the 'playgrounds' string should be an isogram`, () => {
+  it(`should return true when no repeating letters`, () => {
     expect(isIsogram('playgrounds'))
       .toBeTruthy();
   });
 
-  it(`the 'Sun' string should be an isogram`, () => {
+  it(`should return false when there are repeating letters`, () => {
     expect(isIsogram('playgrounds'))
       .toBeTruthy();
   });
 
-  it(`the 'aPple' string shouldn't  be an isogram`, () => {
-    expect(isIsogram('aPple'))
-      .toBeFalsy();
-  });
-
-  it(`the 'Madam' string shouldn't  be an isogram`, () => {
-    expect(isIsogram('aPple'))
-      .toBeFalsy();
-  });
-
-  it(`the 'moon' string shouldn't  be an isogram`, () => {
+  it(`should return false when repeating in different registers`, () => {
     expect(isIsogram('aPple'))
       .toBeFalsy();
   });
