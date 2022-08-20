@@ -8,8 +8,32 @@ describe(`'isIsogram' function`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
+  // Positive tests:
   it(`returns true for words with unique letters`, () => {
     const answer = isIsogram('qwerty');
+
+    expect(answer)
+      .toBeTruthy();
+  });
+
+  it(`returns true for words with singe space`, () => {
+    const answer = isIsogram('heso yam');
+
+    expect(answer)
+      .toBeTruthy();
+  });
+
+  
+  it(`returns true for words with unique numbers`, () => {
+    const answer = isIsogram('Tolya1234567890');
+
+    expect(answer)
+      .toBeTruthy();
+  });
+
+  
+  it(`returns true for unique special characters`, () => {
+    const answer = isIsogram(`Petya1!@#$%^&*\\'"()23`);
 
     expect(answer)
       .toBeTruthy();
@@ -36,28 +60,6 @@ describe(`'isIsogram' function`, () => {
       .toBeTruthy();
   });
 
-
-  it(`returns true for words with singe space`, () => {
-    const answer = isIsogram('heso yam');
-
-    expect(answer)
-      .toBeTruthy();
-  });
-
-  it(`returns true for words with unique numbers`, () => {
-    const answer = isIsogram('Tolya1234567890');
-
-    expect(answer)
-      .toBeTruthy();
-  });
-
-  it(`returns true for unique special characters`, () => {
-    const answer = isIsogram(`Petya1!@#$%^&*\\'"()23`);
-
-    expect(answer)
-      .toBeTruthy();
-  });
-
   it(`returns true for 'false'`, () => {
     const answer = isIsogram(`false`);
 
@@ -65,7 +67,7 @@ describe(`'isIsogram' function`, () => {
       .toBeTruthy();
   });
 
-  // Negite test cases:
+  // Negite tests:
   it(`returns false if input has at least one pair of same characters`, () => {
     const answer = isIsogram(`aa`);
 
