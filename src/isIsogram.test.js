@@ -2,6 +2,10 @@
 
 describe('isIsogram', () => {
   const { isIsogram } = require('./isIsogram');
+  
+  it(`should be declared`, () => {
+    expect(isIsogram).toBeInstanceOf(Function);
+  });
 
   it('should return true when input empty string', () => {
     expect(isIsogram(''))
