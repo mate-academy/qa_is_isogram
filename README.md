@@ -2,7 +2,7 @@
 An **isogram** is a word that has no repeating letters, consecutive or
 non-consecutive.
 
-Write a function `isIsogram` that takes a string `word`, that contains only
+Write a tests for the function `isIsogram` that takes a string `word`, that contains only
 letters, and checks whether this word is an **isogram**.
 
 Notes:
