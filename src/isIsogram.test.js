@@ -8,56 +8,56 @@ describe('isIsogram', () => {
       .toBeInstanceOf(Function);
   });
 
-  it(`An empty string is an isogram`, () => {
+  it(`Should return "True" for an empty string`, () => {
     const result = isIsogram('');
 
     expect(result)
       .toBe(true);
   });
 
-  it(`The 'a' is an isogram`, () => {
+  it(`Should return "True" for the 'a' string`, () => {
     const result = isIsogram('a');
 
     expect(result)
       .toBe(true);
   });
 
-  it(`The 'Ax' is an isogram`, () => {
+  it(`Should return "True" for the 'aX' string`, () => {
     const result = isIsogram('aX');
 
     expect(result)
       .toBe(true);
   });
 
-  it(`The 'Potato' is not an isogram`, () => {
+  it(`Should return "False" for the 'Potato' string`, () => {
     const result = isIsogram('Potato');
 
     expect(result)
       .toBe(false);
   });
 
-  it(`The 'playgrounds' is an isogram`, () => {
+  it(`Should return "True" for the 'playgrounds' string`, () => {
     const result = isIsogram('playgrounds');
 
     expect(result)
       .toBe(true);
   });
 
-  it(`The 'Randomizer' is not an isogram`, () => {
+  it(`Should return "False" for the 'Randomizer' string`, () => {
     const result = isIsogram('Randomizer');
 
     expect(result)
       .toBe(false);
   });
 
-  it(`The 'loops' is not an isogram`, () => {
+  it(`Should return "False" for the 'loops' string`, () => {
     const result = isIsogram('loops');
 
     expect(result)
       .toBe(false);
   });
 
-  it(`The 'Bob' is not an isogram`, () => {
+  it(`Should return "Bob" for the 'loops' string`, () => {
     const result = isIsogram('Bob');
 
     expect(result)
