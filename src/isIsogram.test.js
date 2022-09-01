@@ -8,56 +8,54 @@ describe('isIsogram', () => {
       .toBeInstanceOf(Function);
   });
 
-  it(`Should return "True" for an empty string`, () => {
+  it(`Should return 'True' for an empty string`, () => {
     const result = isIsogram('');
 
     expect(result)
       .toBe(true);
   });
 
-  it(`Should return "True" for the 'a' string`, () => {
+  it(`Should return 'True'
+  if a string contains only one letter`, () => {
     const result = isIsogram('a');
 
     expect(result)
       .toBe(true);
   });
 
-  it(`Should return "True" for the 'aX' string`, () => {
-    const result = isIsogram('aX');
+  it(`Should return 'True'
+  if a string contains two different letters`, () => {
+    const result = isIsogram('ax');
 
     expect(result)
       .toBe(true);
   });
 
-  it(`Should return "False" for the 'Potato' string`, () => {
+  it(`Should return "False"
+  if a string contains two repeated letters`, () => {
     const result = isIsogram('Potato');
 
     expect(result)
       .toBe(false);
   });
 
-  it(`Should return "True" for the 'playgrounds' string`, () => {
+  it(`Should return "True"
+  if a string doesn't contain repeated letters`, () => {
     const result = isIsogram('playgrounds');
 
     expect(result)
       .toBe(true);
   });
 
-  it(`Should return "False" for the 'Randomizer' string`, () => {
+  it(`Should return "False" if a string contains one repeated letters`, () => {
     const result = isIsogram('Randomizer');
 
     expect(result)
       .toBe(false);
   });
 
-  it(`Should return "False" for the 'loops' string`, () => {
-    const result = isIsogram('loops');
-
-    expect(result)
-      .toBe(false);
-  });
-
-  it(`Should return "Bob" for the 'loops' string`, () => {
+  it(`Should return "False"
+  if a string contains two identical letters but in different cases`, () => {
     const result = isIsogram('Bob');
 
     expect(result)
