@@ -11,13 +11,21 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBeTruthy();
   });
 
-  it('should return correct value if a non-empty string is received', () => {
+  it(`should return 'true' if letters are not repeated`, () => {
     expect(isIsogram('playgrounds')).toBeTruthy();
+  });
+
+  it(`should return 'false' if letters are repeated`, () => {
     expect(isIsogram('look')).toBeFalsy();
   });
-  
-  it('should return a valid string regardless of case', () => {
-    expect(isIsogram('LooK')).toBeFalsy();
+
+  it(`should return 'true' if letters are not`
+    + ` repeated regardless of case`, () => {
     expect(isIsogram('PlayGrouNDS')).toBeTruthy();
+  });
+
+  it(`should return 'false' if letters are not`
+    + ` repeated regardless of case`, () => {
+    expect(isIsogram('LOok')).toBeFalsy();
   });
 });
