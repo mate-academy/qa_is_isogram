@@ -37,4 +37,10 @@ describe('isIsogram', () => {
   character`, () => {
     expect(isIsogram('hi, cat,')).toBeFalsy();
   });
+
+  test(`should throw an error if input is not a string`, () => {
+    expect(() => {
+      isIsogram(24);
+    }).toThrow();
+  });
 });
