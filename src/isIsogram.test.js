@@ -43,7 +43,7 @@ describe('isIsogram', () => {
   });
 
   it(`isIsogram('cooperation') should return 'false'`, () => {
-    expect(isIsogram('cooperations'))
+    expect(isIsogram('cooperation'))
       .toBe(false);
   });
 
