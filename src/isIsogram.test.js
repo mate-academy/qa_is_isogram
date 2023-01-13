@@ -7,21 +7,21 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  test(`return 'true' if argument equel empty string`, () => {
+  test(`should return 'true' if argument equal empty string`, () => {
     const isogram = isIsogram('');
 
     expect(isogram)
       .toEqual(true);
   });
 
-  test(`return 'true' if argument contains no repeating letters`, () => {
+  test(`should return 'true' if argument contains no repeating letters`, () => {
     const isogram = isIsogram('abcdef');
 
     expect(isogram)
       .toEqual(true);
   });
 
-  test(`return 'true' if argument contains no repeating`
+  test(`should return 'true' if argument contains no repeating`
   + `and case-insensitive letters`, () => {
     const isogram = isIsogram('aBcDeF');
 
@@ -29,14 +29,14 @@ describe('isIsogram', () => {
       .toEqual(true);
   });
 
-  test(`return 'false' if argument contains repeating letters`, () => {
+  test(`should return 'false' if argument contains repeating letters`, () => {
     const isogram = isIsogram('aabcdef');
 
     expect(isogram)
       .toEqual(false);
   });
 
-  test(`return 'false' if argument contains repeating`
+  test(`should return 'false' if argument contains repeating`
   + `and case-insensitive letters`, () => {
     const isogram = isIsogram('Aabcdef');
 
