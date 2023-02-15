@@ -39,7 +39,7 @@ describe('isIsogram', () => {
     expect(isIsogram('!@#$%')).toBe(true);
   });
 
-  it(`Should be true when input is the same special symbols`, () => {
-    expect(isIsogram('!@#$%')).toBe(true);
+  it(`Should be false when input is the same special symbols`, () => {
+    expect(isIsogram('!!!!!')).toBe(false);
   });
 });
