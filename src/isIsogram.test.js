@@ -25,7 +25,7 @@ describe('isIsogram', () => {
     expect(res).toBe(false);
   });
 
-  it(`should be case sensitive`, () => {
+  it(`should NOT be case sensitive`, () => {
     const res = isIsogram('AbRakADabra');
 
     expect(res).toBe(false);
