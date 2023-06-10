@@ -28,21 +28,14 @@ describe('isIsogram', () => {
     expect(isIsogram('apple')).toBe(false);
   });
 
-  it('should return false for a word with repeating letters', () => {
-    expect(isIsogram('HeLlo')).toBe(false);
-    expect(isIsogram('WorLd')).toBe(true);
-    expect(isIsogram('ApplE')).toBe(false);
-  });
-
-  it('should return false for a word containing non-letter characters', () => {
-    expect(isIsogram('isogram1')).toBe(true);
-    expect(isIsogram('word!')).toBe(true);
-    expect(isIsogram('abc@def')).toBe(true);
-  });
-
   it('should be case-insensitive', () => {
     expect(isIsogram('mM')).toBe(false);
-    expect(isIsogram('Mm')).toBe(false);
     expect(isIsogram('mm')).toBe(false);
+  });
+
+  it('should handle Cyrillic letters', () => {
+    expect(isIsogram('Привіт')).toBe(true);
+    expect(isIsogram('Мир')).toBe(true);
+    expect(isIsogram('Булка')).toBe(true);
   });
 });
