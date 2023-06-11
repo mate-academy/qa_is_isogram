@@ -11,11 +11,12 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it('should return true for a word without repeating letters', () => {
-    expect(isIsogram('isogram')).toBe(true);
-    expect(isIsogram('word')).toBe(true);
-    expect(isIsogram('abcdefghijklmnopqrstuvwxyz')).toBe(true);
-  });
+  it('should return true for words with mixed case and no repeating letters',
+    () => {
+      expect(isIsogram('isogram')).toBe(true);
+      expect(isIsogram('word')).toBe(true);
+      expect(isIsogram('abcdefghijklmnopqrstuvwxyz')).toBe(true);
+    });
 
   it('should return true for words with repeating letters', () => {
     expect(isIsogram('IsOgram')).toBe(true);
