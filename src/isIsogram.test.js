@@ -18,10 +18,11 @@ describe('isIsogram', () => {
       expect(isIsogram('abcdefghijklmnopqrstuvwxyz')).toBe(true);
     });
 
-  it('should return true for words with repeating letters', () => {
-    expect(isIsogram('IsOgram')).toBe(true);
-    expect(isIsogram('WoRd')).toBe(true);
-  });
+  it('should return true for words case-insensitive',
+    () => {
+      expect(isIsogram('IsOgram')).toBe(true);
+      expect(isIsogram('WoRd')).toBe(true);
+    });
 
   it('should return false for a word with repeating letters', () => {
     expect(isIsogram('hello')).toBe(false);
