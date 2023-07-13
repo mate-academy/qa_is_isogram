@@ -15,11 +15,15 @@ describe('isIsogram', () => {
     expect(isIsogram('isisOGraM')).toBe(false);
   });
 
-  it('Word without duplicated character', () => {
+  it('should return false for double letters', () => {
     expect(isIsogram('twelve')).toBe(false);
   });
 
-  it('Word with duplicated character in mixed case', () => {
+  it('should return false for case-sensitive with double letters', () => {
     expect(isIsogram('Alphabet')).toBe(false);
+  });
+
+  it(`should return 'true' for correct isogram`, () => {
+    expect(isIsogram('playgrounds')).toBe(true);
   });
 });
