@@ -11,15 +11,11 @@ describe('isIsogram', () => {
     expect(isIsogram('watch')).toEqual(expect.any(Boolean));
   });
 
-  it(`should return true if params is an emty string`, () => {
+  it(`should return true if params is an empty string`, () => {
     expect(isIsogram('')).toEqual(true);
   });
 
   it(`should return true if params has no repeating letters`, () => {
-    expect(isIsogram('playgrounds')).toEqual(true);
-  });
-
-  it(`should return false if params has repeating letters`, () => {
     expect(isIsogram('playgrounds')).toEqual(true);
   });
 
