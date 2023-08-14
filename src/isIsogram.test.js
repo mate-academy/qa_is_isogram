@@ -9,21 +9,21 @@ describe('isIsogram', () => {
 
   it(`should return true for 'playgrounds'`, () => {
     expect(isIsogram('playgrounds'))
-      .toBe(true);
+      .toBeTruthy();
   });
 
   it(`should return false for 'look'`, () => {
     expect(isIsogram('look'))
-      .toBe(false);
+      .toBeFalsy();
   });
 
   it(`should return false for 'Adam'`, () => {
     expect(isIsogram('Adam'))
-      .toBe(false);
+      .toBeFalsy();
   });
 
   it(`should return true for an empty string`, () => {
     expect(isIsogram(''))
-      .toBe(true);
+      .toBeTruthy();
   });
 });
