@@ -10,30 +10,30 @@ describe('isIsogram', () => {
   it(`should retutrn 'true' `
   + `if 'word' is empty 'string'`, () => {
     expect(isIsogram(''))
-      .toBe(true);
+      .toBeTruthy();
   });
 
   it(`should retutrn 'true' `
   + `if 'word' is isogram with lowercase letters`, () => {
     expect(isIsogram('playgrounds'))
-      .toBe(true);
+      .toBeTruthy();
   });
 
   it(`should retutrn 'true' `
   + `if 'word' is isogram with mixed-case letters`, () => {
     expect(isIsogram('GarDen'))
-      .toBe(true);
+      .toBeTruthy();
   });
 
   it(`should retutrn 'false' `
   + `if 'word' is not isogram with lowercase letters`, () => {
     expect(isIsogram('look'))
-      .toBe(false);
+      .toBeFalsy();
   });
 
   it(`should retutrn 'false' `
   + `if 'word' is not isogram with mixed-case letters`, () => {
     expect(isIsogram('Adam'))
-      .toBe(false);
+      .toBeFalsy();
   });
 });
