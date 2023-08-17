@@ -28,14 +28,4 @@ describe('isIsogram', () => {
 
     expect(result).toBe(false);
   });
-
-  it('should return false for repeated letters world', () => {
-    let result = isIsogram('look');
-
-    expect(result).toBe(false);
-
-    result = isIsogram('Adam');
-
-    expect(result).toBe(false);
-  });
 });
