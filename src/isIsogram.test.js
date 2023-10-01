@@ -6,4 +6,28 @@ describe('isIsogram', () => {
   it(`should be declared`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
+
+  it('should return true for an empty string', () => {
+    const result = isIsogram('');
+
+    expect(result).toBe(true);
+  });
+
+  it('should return true for a lowercase isogram', () => {
+    const result = isIsogram('playgrounds');
+
+    expect(result).toBe(true);
+  });
+
+  it('should return false for a mixed-case word', () => {
+    const result = isIsogram('Adam');
+
+    expect(result).toBe(false);
+  });
+
+  it('should return false for a word with repeating letters', () => {
+    const result = isIsogram('look');
+
+    expect(result).toBe(false);
+  });
 });
