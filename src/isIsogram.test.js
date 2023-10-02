@@ -6,7 +6,7 @@ describe('isIsogram', () => {
   it(`should be declared`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
-
+  
   it('should return true for an empty string', () => {
     const result = isIsogram('');
 
@@ -29,5 +29,16 @@ describe('isIsogram', () => {
     const result = isIsogram('look');
 
     expect(result).toBe(false);
+  });
+
+  it('should handle accented characters', () => {
+    const result = isIsogram('résum');
+
+    expect(result).toBe(true);
+  });
+
+  it('should handle non-letter characters', () => {
+    const result = isIsogram('ab-cdefg');
+    expect(result).toBe(true);
   });
 });
