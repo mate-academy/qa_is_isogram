@@ -31,14 +31,20 @@ describe('isIsogram', () => {
     expect(result).toBe(false);
   });
 
-  it('should handle accented characters', () => {
-    const result = isIsogram('résum');
+  it('should return true for a isogram with special characters', () => {
+    const result = isIsogram('R@ce');
 
     expect(result).toBe(true);
   });
 
-  it('should handle non-letter characters', () => {
-    const result = isIsogram('ab-cdefg');
+  it('should return true for a isogram with digits', () => {
+    const result = isIsogram('abc123');
+
+    expect(result).toBe(true);
+  });
+
+  it('should return true for a isogram with mixed characters', () => {
+    const result = isIsogram('A1bC@d3E');
 
     expect(result).toBe(true);
   });
