@@ -7,19 +7,27 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it(`should return 'true' when the word is isogram`, () => {
-    expect(isIsogram('playgrounds')).toBeTruthy();
+  it(`should return true with empty string `, () => {
+    const result = isIsogram('');
+
+    expect(result).toBeTruthy();
   });
 
-  it(`should return 'false' when more than 1 letter repeats`, () => {
-    expect(isIsogram('look')).toBeFalsy();
+  it(`should be case-insensitive`, () => {
+    const result = isIsogram('Oo');
+
+    expect(result).toBeFalsy();
   });
 
-  it(`should return 'false' when the letter repeats in uppercase`, () => {
-    expect(isIsogram('Adam')).toBeFalsy();
+  it(`should be isogram with word 'pencil'`, () => {
+    const result = isIsogram('pencil');
+
+    expect(result).toBeTruthy();
   });
 
-  it(`should return 'true' when there is no input`, () => {
-    expect(isIsogram('')).toBeTruthy();
+  it(`should be not isogram with word 'book'`, () => {
+    const result = isIsogram('book');
+
+    expect(result).toBeFalsy();
   });
 });
