@@ -6,4 +6,20 @@ describe('isIsogram', () => {
   it(`should be declared`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
+
+  it('should return true if all letters are different', () => {
+    expect(isIsogram('clok')).toEqual(true);
+  });
+
+  it('should return true if string is confused', () => {
+    expect(isIsogram('')).toEqual(true);
+  });
+
+  it('should return false if all letters are repeated', () => {
+    expect(isIsogram('sleep')).toEqual(false);
+  });
+
+  it('should return false if same letter in different case', () => {
+    expect(isIsogram('America')).toEqual(false);
+  });
 });
