@@ -22,4 +22,13 @@ describe('isIsogram', () => {
   it(`should be case-insensitive`, () => {
     expect(isIsogram('Adam')).toBe(false);
   });
+
+  it(`should return true for a single letter`, () => {
+    expect(isIsogram('a')).toBe(true);
+  });
+
+  it(`should work with Cyrillic letters`, () => {
+    expect(isIsogram('абвгд')).toBe(true);
+    expect(isIsogram('абвгда')).toBe(false);
+  });
 });
