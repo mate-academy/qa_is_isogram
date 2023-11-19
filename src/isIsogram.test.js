@@ -19,7 +19,7 @@ describe('isIsogram', () => {
     expect(isIsogram('sleep')).toEqual(false);
   });
 
-  it('should return false if same letter in different case', () => {
+  it(`shouldn't be case-sensitive`, () => {
     expect(isIsogram('America')).toEqual(false);
   });
 });
