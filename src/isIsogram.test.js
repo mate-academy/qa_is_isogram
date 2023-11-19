@@ -11,11 +11,11 @@ describe('isIsogram', () => {
     expect(isIsogram('clok')).toEqual(true);
   });
 
-  it('should return true if string is confused', () => {
+  it('should return true if string is empty', () => {
     expect(isIsogram('')).toEqual(true);
   });
 
-  it('should return false if all letters are repeated', () => {
+  it('should return false if some letters are repeated', () => {
     expect(isIsogram('sleep')).toEqual(false);
   });
 
