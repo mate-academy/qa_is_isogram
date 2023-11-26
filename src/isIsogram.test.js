@@ -23,4 +23,3 @@ describe('isIsogram', () => {
     expect(isIsogram('Adam')).toBeFalsy();
   });
 });
-
