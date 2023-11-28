@@ -22,5 +22,29 @@ describe('isIsogram', () => {
   it('Adam', () => {
     expect(isIsogram('Adam')).toBeFalsy();
   });
-});
 
+    it('different languages CС', () => {
+    expect(isIsogram('CС')).toBeTruthy();
+  });
+
+  it('One letter', () => {
+    expect(isIsogram('K')).toBeTruthy();
+  });
+
+  it('Special symbols', () => {
+    expect(isIsogram('@_-')).toBeTruthy();
+  });
+
+    it('Numbers', () => {
+    expect(isIsogram('12345')).toBeTruthy();
+  });
+  
+  it('Same numbers', () => {
+    expect(isIsogram('55')).toBeFalsy();
+  });
+
+  it('Same symbols', () => {
+    expect(isIsogram('@@')).toBeFalsy();
+  });
+
+});
