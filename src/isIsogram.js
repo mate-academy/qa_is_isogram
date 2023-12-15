@@ -5,7 +5,7 @@
  *
  * @returns {boolean}
  */
-function isIsogram(word) {
+function isIsogram(word = '') {
   const wordToLower = word.toLowerCase();
 
   for (let i = 0; i < wordToLower.length; i++) {
