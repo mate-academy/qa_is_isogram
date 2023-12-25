@@ -19,7 +19,7 @@ describe('isIsogram', () => {
     expect(isIsogram('Aa')).toEqual(false);
   });
 
-  it(`Should return 'true' with '' imput`, () => {
+  it(`Should return 'true' with empty imput`, () => {
     expect(isIsogram('hii')).toEqual(false);
   });
 });
