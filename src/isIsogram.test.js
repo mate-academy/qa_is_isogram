@@ -7,11 +7,11 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it('should return false if entered string is lowercase', () => {
+  it('should return false for lowercase string with repeatings', () => {
     expect(isIsogram('look')).toBe(false);
   });
 
-  it('should return false if entered string is upercase', () => {
+  it('should return false for uppercase string with repeatings', () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 
