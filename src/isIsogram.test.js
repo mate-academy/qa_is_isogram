@@ -7,23 +7,27 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  test(`should return true when the input value is 'Danil' `, () => {
+  test(`should return true when input string
+   has uppercase and no repeatings `, () => {
     expect(isIsogram('Danil')).toBe(true);
   });
 
-  test(`should return false when the input value is 'Daniil' `, () => {
+  test(`should return falce when input string
+   has uppercase and repeatings' `, () => {
     expect(isIsogram('Daniil')).toBe(false);
   });
 
-  test(`should return false when the input value is 'Kateryna' `, () => {
+  test(`should return falce when input string
+   has uppercase and repeatings' `, () => {
     expect(isIsogram('Kateryna')).toBe(false);
   });
 
-  test(`should return true when the input value is 'Kate' `, () => {
+  test(`should return true when input string
+   has uppercase and no repeatings' `, () => {
     expect(isIsogram('Kate')).toBe(true);
   });
 
-  test(`should return true when the input value is '' `, () => {
+  test(`should return true when input string are empty `, () => {
     expect(isIsogram('')).toBe(true);
   });
 });
