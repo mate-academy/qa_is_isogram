@@ -11,15 +11,19 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it('should return true = "playgrounds"', () => {
+  it(`should treat 'M' and 'm' as the same letter`, () => {
+    expect(isIsogram('Mm')).toBe(false);
+  });
+
+  it('should return true if entered string has no repeatings', () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
 
-  it('should return false = "look"', () => {
+  it('should return false if entered string has repeatings', () => {
     expect(isIsogram('look')).toBe(false);
   });
 
-  it('should return false = "Adam"', () => {
+  it('should return false if entered string has repeatings', () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 });
