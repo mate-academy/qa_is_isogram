@@ -1,10 +1,11 @@
-'use strict';
 
 /**
  * @param {string} word
  *
  * @returns {boolean}
  */
+'use strict';
+
 function isIsogram(word) {
   const wordToLower = word.toLowerCase();
 
