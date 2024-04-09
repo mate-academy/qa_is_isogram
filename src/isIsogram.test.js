@@ -31,7 +31,7 @@ describe('isIsogram', () => {
     expect(isIsogram('hello')).toBe(false);
   });
 
-  test('should return false for a word with duplicate letters', () => {
+  test('should return false for duplicate letters (case insensitive)', () => {
     expect(isIsogram('HelLo')).toBe(false);
   });
 });
