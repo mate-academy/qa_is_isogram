@@ -3,39 +3,23 @@
 describe('isIsogram', () => {
   const { isIsogram } = require('./isIsogram');
 
-  it(`should be declared`, () => {
-    expect(isIsogram('playgrounds')).toEqual(true);
+  it('should be declared', () => {
+    expect(isIsogram).toBeInstanceOf(Function);
   });
-});
 
-describe('isIsogram', () => {
-  const { isIsogram } = require('./isIsogram');
-
-  it(`should be declared`, () => {
-    expect(isIsogram('Playgrounds')).toEqual(true);
+  test('should be an isogram', () => {
+    expect(isIsogram('Playgrounds')).toBe(true);
   });
-});
 
-describe('isIsogram', () => {
-  const { isIsogram } = require('./isIsogram');
-
-  it(`should be declared`, () => {
-    expect(isIsogram('Adam')).toEqual(false);
+  test('should be an isogram', () => {
+    expect(isIsogram('Adam')).toBe(false);
   });
-});
 
-describe('isIsogram', () => {
-  const { isIsogram } = require('./isIsogram');
-
-  it(`should be declared`, () => {
-    expect(isIsogram('look')).toEqual(false);
+  test('should be an isogram', () => {
+    expect(isIsogram('look')).toBe(false);
   });
-});
 
-describe('isIsogram', () => {
-  const { isIsogram } = require('./isIsogram');
-
-  it(`should be declared`, () => {
-    expect(isIsogram(' ')).toEqual(true);
+  test(`should be an isogram`, () => {
+    expect(isIsogram(' ')).toBe(true);
   });
 });
