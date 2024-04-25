@@ -27,7 +27,8 @@ describe('isIsogram', () => {
     expect(isIsogram('cucaracha')).toBe(false);
   });
 
-  test(`return false if entered string has repeating and consits of consecutive letters`, () => {
+  test(`return false if entered string has"
+    + "repeating and consits of consecutive letters`, () => {
     expect(isIsogram('Harry Potter')).toBe(false);
   });
 
