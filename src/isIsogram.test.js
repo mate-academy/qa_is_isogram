@@ -12,16 +12,22 @@ describe('isIsogram', () => {
   });
 
   it('should return true for an isogram string', () => {
-    expect(isIsogram('roksa')).toBe(true);
+    expect(isIsogram('subdermatoglyphic')).toBe(true);
   });
 
   it('should return false for non-isogram string', () => {
     expect(isIsogram('book')).toBe(false);
-    expect(isIsogram('lola')).toBe(false);
   });
 
   it('should handle case-insensitivity', () => {
-    expect(isIsogram('Mmonk')).toBe(false);
     expect(isIsogram('Sister')).toBe(false);
+  });
+
+  it('should return true for a single character string', () => {
+    expect(isIsogram('f')).toBe(true);
+  });
+
+  it('should return false for a long non-isogram string', () => {
+    expect(isIsogram('nonisogramword')).toBe(false);
   });
 });
