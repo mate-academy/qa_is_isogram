@@ -22,4 +22,8 @@ describe('isIsogram', () => {
   it('should return true if entered empty string', () => {
     expect(isIsogram('')).toBe(true);
   });
+
+  it('should return true if entered cyryllic and latin letters', () => {
+    expect(isIsogram('їmarф')).toBe(true);
+  });
 });
