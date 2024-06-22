@@ -7,33 +7,38 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it(`should be returned true for ''`, () => {
-    expect(isIsogram('playground'))
+  it(`should be returned true if entered an empty string`, () => {
+    expect(isIsogram(''))
       .toBe(true);
   });
 
-  it(`should be returned true for 'MATE'`, () => {
+  it(`should be returned true if entered a string without 
+    repeatings in uppercase`, () => {
     expect(isIsogram('MATE'))
       .toBe(true);
   });
 
-  it(`should be returned true for 'QAmentor'`, () => {
-    expect(isIsogram('QAmentor'))
+  it(`should be returned true if entered a string without 
+    repeatings in lowercase`, () => {
+    expect(isIsogram('qamentor'))
       .toBe(true);
   });
 
-  it(`should be returned false for 'isolation'`, () => {
+  it(`should be returned false if entered string with 
+    repeating letters in lowercase`, () => {
     expect(isIsogram('isolation'))
       .toBe(false);
   });
 
-  it(`should be returned false for 'Obviously'`, () => {
+  it(`should be returned false if entered string with
+    repeating letters in upper and lower cases`, () => {
     expect(isIsogram('Obviously'))
       .toBe(false);
   });
 
-  it(`should be returned false for 'aaaaa'`, () => {
-    expect(isIsogram('aaaaa'))
+  it(`should be returned false if entered a string with repeating 
+    letters in lowercase'`, () => {
+    expect(isIsogram('abdominal'))
       .toBe(false);
   });
 });
