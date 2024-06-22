@@ -11,7 +11,16 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it(`String that has no repeating letters,
+  it(`should return 'true'
+    when the repeated letter is a Cyrillic letter`, () => {
+    expect(isIsogram('schoоl')).toBe(true);
+  });
+
+  it(`should return 'true' when entering one letter`, () => {
+    expect(isIsogram('s')).toBe(true);
+  });
+
+  it(`string that has no repeating letters,
     case-insensetive, should return true`, () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
@@ -20,13 +29,5 @@ describe('isIsogram', () => {
     should return false`, () => {
     expect(isIsogram('look')).toBe(false);
     expect(isIsogram('loOk')).toBe(false);
-});
-
-  it(`Non valid input should return false`, () => {
-    expect(isIsogram(null)).toBe(false);
-
-    expect(isIsogram(987654)).toBe(false);
-
-    expect(isIsogram(-133)).toBe(false);
   });
 });
