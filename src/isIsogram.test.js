@@ -22,4 +22,13 @@ describe('isIsogram', () => {
   test(`should return false for a mixed case repeating letters string`, () => {
     expect(isIsogram('loOk')).toEqual(false);
   });
+
+  test(`should return false if a string contains repeating digits`, () => {
+    expect(isIsogram('playgrounds111')).toEqual(false);
+  });
+
+  test(`should return true if a string contains non-repeating
+      cyryllic and latin letters`, () => {
+    expect(isIsogram('playgroundsслон')).toEqual(true);
+  });
 });
