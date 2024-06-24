@@ -8,18 +8,18 @@ describe('isIsogram', () => {
   });
 
   it(`should return true if isIsogram('')`, () => {
-    expect(isIsogram === true);
+    expect(isIsogram('')).toBeTruthy();
   });
 
   it(`should return true if isIsogram includes different letters`, () => {
-    expect(isIsogram === true);
+    expect(isIsogram('playgrounds')).toBeTruthy();
   });
 
   it(`should return true if isIsogram has letters in divers registers`, () => {
-    expect(isIsogram === true);
+    expect(isIsogram('Playgrounds')).toBeTruthy();
   });
 
   it(`should return false if isIsogram includes identical letters`, () => {
-    expect(isIsogram === false);
+    expect(isIsogram('look'));
   });
 });
