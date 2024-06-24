@@ -8,7 +8,7 @@ describe('isIsogram', () => {
   });
 
   it(`should return true for an empty string`, () => {
-    expect(isIsogram()).toBe(true);
+    expect(isIsogram('')).toBe(true);
   });
 
   it(`should return false for repeating letters`, () => {
