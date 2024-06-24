@@ -20,6 +20,11 @@ describe('isIsogram', () => {
   });
 
   it(`should return false if isIsogram includes identical letters`, () => {
-    expect(isIsogram('look'));
+    expect(isIsogram('look')).toBeFalsy();
+  });
+
+  it(`should return false if isIsogram includes identical letters`
+    + `in different register`, () => {
+    expect(isIsogram('look')).toBeFalsy();
   });
 });
