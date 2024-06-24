@@ -15,8 +15,8 @@ describe('isIsogram', () => {
     expect(isIsogram('repeating')).toBe(false);
   });
 
-  it(`should return false for repeating letters`, () => {
-    expect(isIsogram('RepeAting')).toBe(false);
+  it(`should return false for repeating letters case insensitive`, () => {
+    expect(isIsogram('repEating')).toBe(false);
   });
 
   it(`should return true for not repeating letters`, () => {
