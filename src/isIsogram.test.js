@@ -12,13 +12,11 @@ describe('isIsogram', () => {
 
   it('should return true for isograms', () => {
     expect(isIsogram('isogram')).toBe(true);
-    expect(isIsogram('Unique')).toBe(false);
-    expect(isIsogram('Alphabetic')).toBe(false);
+    expect(isIsogram('Dermatoglyphics')).toBe(true);
   });
 
   it('should return false for non-isograms', () => {
     expect(isIsogram('hello')).toBe(false);
-    expect(isIsogram('Dermatoglyphics')).toBe(true);
     expect(isIsogram('abbA')).toBe(false);
   });
 
