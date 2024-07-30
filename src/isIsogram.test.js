@@ -38,7 +38,7 @@ describe('isIsogram', () => {
     expect(isIsogram('fantastic e')).toBe(false);
   });
 
-  it('should return true for "Alphabet" (case insensitive check)', () => {
+  it('should return false for "Alphabet" (case insensitive check)', () => {
     expect(isIsogram('Alphabet'.toLowerCase())).toBe(false);
   });
 
