@@ -7,42 +7,69 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it('function return should be a boolean', () => {
+  it('should return boolean', () => {
     expect(typeof isIsogram(''))
       .toBe('boolean');
   });
 
-  it('should return true for "abcd"', () => {
-    expect(isIsogram('abcd'))
-      .toEqual(true);
+  describe('Cyrillic letters', () => {
+    it('should work with UpperCase letters', () => {
+      expect(isIsogram('АБВГ'))
+        .toEqual(true);
+      expect(isIsogram('АБВА'))
+        .toEqual(false);
+    });
+    it('should work with LowerCase letters', () => {
+      expect(isIsogram('абвг'))
+        .toEqual(true);
+      expect(isIsogram('абва'))
+        .toEqual(false);
+    });
+    it('should work with CamelCase letters', () => {
+      expect(isIsogram('АбВг'))
+        .toEqual(true);
+      expect(isIsogram('АбВа'))
+        .toEqual(false);
+    });
   });
 
-  it('should return false for "abca"', () => {
-    expect(isIsogram('abca'))
-      .toEqual(false);
+  describe('Latin letters', () => {
+    it('should work with UpperCase letters', () => {
+      expect(isIsogram('ABCD'))
+        .toEqual(true);
+      expect(isIsogram('ABCA'))
+        .toEqual(false);
+    });
+    it('should work with LowerCase letters', () => {
+      expect(isIsogram('abcd'))
+        .toEqual(true);
+      expect(isIsogram('abca'))
+        .toEqual(false);
+    });
+    it('should work with CamelCase letters', () => {
+      expect(isIsogram('AbCd'))
+        .toEqual(true);
+      expect(isIsogram('AbCa'))
+        .toEqual(false);
+    });
   });
 
-  it('should throw an error for numbers as numbers', () => {
-    expect(() => {
-      isIsogram(1234);
-    }).toThrow(new Error('word.toLowerCase is not a function'));
-  });
-
-  it('should correctly work with numbers as string', () => {
-    expect(isIsogram('1234'))
-      .toEqual(true);
-
-    expect(isIsogram('1231'))
-      .toEqual(false);
-  });
-
-  it('should return true for phrase with 1 space', () => {
-    expect(isIsogram('a b'))
-      .toEqual(true);
-  });
-
-  it('should return false for phrase with 2 or more spaces', () => {
-    expect(isIsogram('a b c'))
-      .toEqual(false);
+  describe('different alphabets', () => {
+    it('should return true for latin A and cyrillic A', () => {
+      expect(isIsogram('AА'))
+        .toEqual(true);
+    });
+    it('should return true for latin a and cyrillic a', () => {
+      expect(isIsogram('aа'))
+        .toEqual(true);
+    });
+    it('should return true for latin A and cyrillic a', () => {
+      expect(isIsogram('Aа'))
+        .toEqual(true);
+    });
+    it('should return true for latin a and cyrillic A', () => {
+      expect(isIsogram('aА'))
+        .toEqual(true);
+    });
   });
 });
