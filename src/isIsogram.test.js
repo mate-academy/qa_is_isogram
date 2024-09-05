@@ -7,6 +7,10 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
+  test(`should be declared`, () => {
+    expect(isIsogram).toBeInstanceOf(Function);
+  });
+
   test('should return true if string is empty', () => {
     expect(isIsogram('')).toBe(true);
   });
