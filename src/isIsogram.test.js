@@ -25,8 +25,13 @@ describe('isIsogram', () => {
     expect(isIsogram('hello')).toBe(false);
   });
 
-  it('should be case-insensitive', () => {
+  it('should return true for an isogram, case-insensitive', () => {
     expect(isIsogram('LumberJack')).toBe(true);
+    expect(isIsogram('Dermatoglyphics')).toBe(true);
+  });
+
+  it('should return false for a non-isogram, case-insensitive', () => {
     expect(isIsogram('Alphabet')).toBe(false);
+    expect(isIsogram('Mississippi')).toBe(false);
   });
 });
