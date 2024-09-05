@@ -6,4 +6,27 @@ describe('isIsogram', () => {
   it(`should be declared`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
+
+  it(`should return true for an empty string`, () => {
+    expect(isIsogram('')).toBe(true);
+  });
+
+  it('should return true for an isogram word', () => {
+    expect(isIsogram('lumberjack')).toBe(true);
+    expect(isIsogram('copyright')).toBe(true);
+    expect(isIsogram('flamingo')).toBe(true);
+    expect(isIsogram('basket')).toBe(true);
+    expect(isIsogram('monarchy')).toBe(true);
+  });
+
+  it('should return false for a non-isogram word', () => {
+    expect(isIsogram('look')).toBe(false);
+    expect(isIsogram('Adam')).toBe(false);
+    expect(isIsogram('hello')).toBe(false);
+  });
+
+  it('should be case-insensitive', () => {
+    expect(isIsogram('LumberJack')).toBe(true);
+    expect(isIsogram('Alphabet')).toBe(false);
+  });
 });
