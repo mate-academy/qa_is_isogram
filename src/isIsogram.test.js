@@ -16,7 +16,8 @@ describe('isIsogram', () => {
     expect(isIsogram('mechanism')).toBe(false);
   });
 
-  it(`should return false with mixed case letters`, () => {
+  it(`should return false for a word that has repeating letters
+    with different case`, () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 
