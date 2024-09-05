@@ -23,4 +23,28 @@ it(`should return true when string is empty`, () => {
 expect(isIsogram('')).toBe(true);
 });
 
+it(`should return true when string is empty`, () => {
+expect(isIsogram('')).toBe(true);
+});
+
+it(`should return true when string containe words in upper and lower cases`, () => {
+expect(isIsogram('JaimeLnstr')).toBe(true);
+});
+
+it(`should return true when string containe alfanumeric symbols`, () => {
+expect(isIsogram('1sword2kng')).toBe(true);
+});
+
+it(`should return true when string containe only one letter`, () => {
+expect(isIsogram('w')).toBe(true);
+});
+
+it(`should return false when string containe repeated letters on Upper and Lower cases`, () => {
+expect(isIsogram('ArthurDayne')).toBe(false);
+});
+
+it(`should return false when string containe repeated alfanumeric characters on Upper and Lower cases`, () => {
+  expect(isIsogram('M0rsmodre')).toBe(false);
+  });
+
 });
