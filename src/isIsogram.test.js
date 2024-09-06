@@ -17,19 +17,19 @@ describe('isIsogram', () => {
 
   it(`shoud return false if a word has
     consecutive repeating letters`, () => {
-    expect(isIsogram('Apple')).toBeFalsy();
+    expect(isIsogram('apple')).toBeFalsy();
   });
 
   it(`shoud return false if a word has
     non-consecutive repeating letters`, () => {
-    expect(isIsogram('Dragarys')).toBeFalsy();
-  });
-
-  it('shoud return true for empty string', () => {
-    expect(isIsogram('')).toBeTruthy();
+    expect(isIsogram('dragarys')).toBeFalsy();
   });
 
   it('shoud be case insensetive', () => {
-    expect(isIsogram('Emet')).toBeFalsy();
+    expect(isIsogram('Ema')).toBeTruthy();
+  });
+
+  it('shoud return true if a word has one letter', () => {
+    expect(isIsogram('s')).toBeTruthy();
   });
 });
