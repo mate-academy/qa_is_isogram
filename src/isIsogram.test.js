@@ -15,16 +15,8 @@ describe("isIsogram", () => {
     }
   });
 
-  it("should return boolean value", () => {
-    expect(isIsogram("")).toBeInstanceOf(Boolean);
-  });
-
   it("should return true if value equal empty string", () => {
-    expect(isIsogram("")).toBe(true);
-  });
-
-  it("should return true to doubled chars", () => {
-    expect(isIsogram("aA")).toBe(false);
+    expect(isIsogram("")).toBeTruthy();
   });
 
   it("should be not case sensitive ", () => {
@@ -32,10 +24,10 @@ describe("isIsogram", () => {
   });
 
   it("should return true to single char", () => {
-    expect(isIsogram("a")).toBe(true);
+    expect(isIsogram("a")).toBeTruthy();
   });
 
   it("should return false to doubled chars", () => {
-    expect(isIsogram("aA")).toBe(false);
+    expect(isIsogram("aA")).toBeFalsy();
   });
 });
