@@ -15,14 +15,3 @@ function isIsogram(word) {
 }
 
 module.exports = { isIsogram };
-
-
-function maxValue(array) {
-  return Math.max(...arr);
-}
-
-function isPalindrome(str) {
-  const reversedString = str.split('').reverse().join('');
-
-  return str === reversedString;
-}
