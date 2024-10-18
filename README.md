@@ -11,6 +11,8 @@ Notes:
 - for this task, the empty string is an **isogram**;
 - function should be case-insensitive (`M` and `m` are considered the same letter).
 
+Make sure that each test case has a clear and unique description.
+
 Examples:
 
 ```js
@@ -18,6 +20,7 @@ isIsogram('playgrounds') === true
 isIsogram('look') === false
 isIsogram('Adam') === false
 isIsogram('') === true
+isIsogram('Oops') === false
 ```
 
 [Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
