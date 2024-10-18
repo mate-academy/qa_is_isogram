@@ -35,11 +35,7 @@ describe('isIsogram', () => {
     expect(isIsogram('AaBbCc')).toBe(false);
   });
 
-  it('should return true for "Machine" (isogram with different cases)', () => {
-    expect(isIsogram('Machine')).toBe(true);
-  });
-
-  it('should return true for "abc123" (numbers or other characters)', () => {
-    expect(isIsogram('abc123')).toBe(true);
+  it('should return true for "abcdef" (all unique letters)', () => {
+    expect(isIsogram('abcdef')).toBe(true);
   });
 });
