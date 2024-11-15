@@ -33,4 +33,10 @@ describe('isIsogram', () => {
     expect(() => isIsogram(null)).toThrow();
     expect(() => isIsogram(undefined)).toThrow();
   });
+
+  it('should ignore non-alphabetic characters', () => {
+    expect(isIsogram('a1b2c3')).toBe(true);
+    expect(isIsogram('!@#$%')).toBe(true);
+    expect(isIsogram('a!b@c#')).toBe(true);
+  });
 });
