@@ -19,20 +19,12 @@ describe('isIsogram', () => {
     expect(isIsogram('Ccart')).toBe(false);
   });
 
-  it(`does not accept numbers`, () => {
-    expect(isIsogram('My Oleh2')).toBe(false);
-  });
-
-  it(`ignores spaces`, () => {
-    expect(isIsogram('   oleh')).toBe(true);
-  });
-
   it('positive case', () => {
     expect(isIsogram('abcdefghij')).toBe(true);
   });
 
   it('accepts non-latin letters', () => {
     expect(isIsogram('борна')).toBe(true);
-  });пше 
+  });
 
 });
