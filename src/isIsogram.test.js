@@ -25,6 +25,10 @@ describe('isIsogram', () => {
     expect(isIsogram(' ')).toBe(true);
   });
 
+  it('should return true for " " input', () => {
+    expect(isIsogram('')).toBe(true);
+  });
+
   it('should be case-insensitive, and return false for "Adam"', () => {
     expect(isIsogram('Adam')).toBe(false);
   });
