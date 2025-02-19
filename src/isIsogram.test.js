@@ -16,7 +16,7 @@ describe('isIsogram', () => {
   });
 
   it('should return false if word with space', () => {
-    expect(isIsogram('pl  ay  grounds')).toBeFalsy();
+    expect(isIsogram('pl aygrounds')).toBeFalsy();
   });
 
   it('should return false value', () => {
