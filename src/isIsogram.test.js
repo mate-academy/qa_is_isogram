@@ -12,17 +12,18 @@ describe("isIsogram", () => {
 
     expect(result).toBeTruthy();
   });
-  it("should work correctly with truth", () => {
+
+  it("should return true for a valid isogram", () => {
     const result = isIsogram("playgrounds");
 
     expect(result).toBeTruthy();
   });
 
-  it("should work correctly with false", () => {
+  it("should return false for a non-valid isogram", () => {
     const result = isIsogram("adam");
 
     expect(result).toBeFalsy();
-  })
+  });
 
   it("should work case-sensitively", () => {
     const result = isIsogram("Marim");
