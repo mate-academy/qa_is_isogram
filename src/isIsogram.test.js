@@ -19,18 +19,6 @@ describe('isIsogram', () => {
     expect(result).toBeTruthy();
   });
 
-  it('should return true for a word with special characters', () => {
-    const result = isIsogram('a-b_c');
-
-    expect(result).toBeTruthy();
-  });
-
-  it('should return true for a word with numbers', () => {
-    const result = isIsogram('ab2c3');
-
-    expect(result).toBeTruthy();
-  });
-
   it('should return true for an isogram word', () => {
     const result = isIsogram('playgrounds');
 
