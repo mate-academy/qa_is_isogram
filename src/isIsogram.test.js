@@ -19,12 +19,11 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it(`should return false for 'Adam'`, () => {
-    expect(isIsogram('Adam')).toBe(false);
+  it(`should return false for 'adam'`, () => {
+    expect(isIsogram('adam')).toBe(false);
   });
 
   it(`should return false for 'Oops'`, () => {
     expect(isIsogram('Oops')).toBe(false);
   });
-
 });
