@@ -7,23 +7,23 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it('Should retern "true" if argument is "playgrounds"', () => {
+  it('Should return "true" if argument is "playgrounds"', () => {
     expect(isIsogram('playgrounds')).toBeTruthy();
   });
 
-  it('Should retern "false" if argument is "look"', () => {
+  it('Should return "false" if argument is "look"', () => {
     expect(isIsogram('look')).toBeFalsy();
   });
 
-  it('Should retern "false" if argument is "Adam"', () => {
-    expect(isIsogram('look')).toBeFalsy();
+  it('Should return "false" if argument is "Adam"', () => {
+    expect(isIsogram('Adam')).toBeFalsy();
   });
 
-  it('Should retern "true" if argument is empty string', () => {
+  it('Should return "true" if argument is empty string', () => {
     expect(isIsogram('')).toBeTruthy();
   });
 
-  it('Should retern "false" if argument is "Oops"', () => {
+  it('Should return "false" if argument is "Oops"', () => {
     expect(isIsogram('Oops')).toBeFalsy();
   });
 });
