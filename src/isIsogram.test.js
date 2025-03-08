@@ -12,9 +12,6 @@
 //   });
 // });
 
-
-
-
 describe('isIsogram', () => {
   const { isIsogram } = require('./isIsogram');
 
@@ -30,11 +27,13 @@ describe('isIsogram', () => {
     expect(isIsogram('broad')).toBe(true);
   });
 
-  it('Should return false if two identical letters have different registers.', () => {
+  it(`Should return false if two identical`
+    + `letters have different registers.`, () => {
     expect(isIsogram('Oo')).toBe(false);
   });
 
-  it('Should return false if the same letters in a row in tha same register', () => {
+  it(`Should return false if the same letters`
+    + `in a row in tha same register`, () => {
     expect(isIsogram('aa')).toBe(false);
   });
 
