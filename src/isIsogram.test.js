@@ -12,14 +12,15 @@ describe('isIsogram', () => {
   });
 
   it('should return true for empty field', () => {
-    expect(isIsogram(' ')).toBe(true);
+    expect(isIsogram('')).toBe(true);
   });
 
   it('should return true for not repited letters', () => {
     expect(isIsogram('Ruslan')).toBe(true);
   });
 
-  it('should return false if a word contains a repeating upper and lower case letter', () => {
+  // eslint-disable-next-line max-len
+  it('should return false if word contains a repeating upper and lower case letter', () => {
     expect(isIsogram('Mama')).toBe(false);
   });
 });
