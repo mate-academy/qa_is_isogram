@@ -1,22 +1,14 @@
 'use strict';
 
-/**
- * @param {string} word
- *
- * @returns {boolean}
- */
 function isIsogram(word) {
-  const wordToLower = word.toLowerCase();
-
-  for (let i = 0; i < wordToLower.length; i++) {
-    const letter = wordToLower[i];
-
-    if (wordToLower.includes(letter, i + 1)) {
-      return false;
-    }
+  if (typeof word !== 'string') {
+    return false;
   }
 
-  return true;
+  const lowerWord = word.toLowerCase();
+  const letters = new Set(lowerWord);
+
+  return letters.size === lowerWord.length;
 }
 
 module.exports = { isIsogram };
