@@ -17,27 +17,27 @@ describe('isIsogram', () => {
       .toBe(false);
   });
 
-  it(`should be isogram 1`, () => {
+  it(`should be isogram for 'aktior'`, () => {
     expect(isIsogram('aktior'))
       .toBe(true);
   });
 
-  it(`should not be isogram 1`, () => {
+  it(`should not be isogram for 'aktiora'`, () => {
     expect(isIsogram('aktiora'))
       .toBe(false);
   });
 
-  it(`should not be isogram 2`, () => {
+  it(`should not be isogram for 'aakt'`, () => {
     expect(isIsogram('aakt'))
       .toBe(false);
   });
 
-  it(`should not be isogram 3`, () => {
+  it(`should not be isogram for 'aktt'`, () => {
     expect(isIsogram('aktt'))
       .toBe(false);
   });
 
-  it(`should not be isogram 4`, () => {
+  it(`should not be isogram for 'akkt'`, () => {
     expect(isIsogram('akkt'))
       .toBe(false);
   });
