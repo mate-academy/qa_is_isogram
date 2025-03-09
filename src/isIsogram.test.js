@@ -24,6 +24,6 @@ describe('isIsogram', () => {
   });
 
   it(`return 'false' for 'Oops'`, () => {
-    expect(isIsogram('OOps')).toBe(false);
+    expect(isIsogram('Oops')).toBe(false);
   });
 });
