@@ -6,14 +6,20 @@
  * @returns {boolean}
  */
 function isIsogram(word) {
-  const wordToLower = word.toLowerCase();
+  const wordToLower = word.toLowerCase(); // Перетворюємо всі літери на малі
+  console.log(`wordToLower: ${wordToLower}`); // Додаємо логування
+
+  const seen = new Set();
 
   for (let i = 0; i < wordToLower.length; i++) {
     const letter = wordToLower[i];
+    console.log(`Checking letter: ${letter}`); // Логування літери
 
-    if (wordToLower.includes(letter, i + 1)) {
+    if (seen.has(letter)) {
       return false;
     }
+
+    seen.add(letter);
   }
 
   return true;
