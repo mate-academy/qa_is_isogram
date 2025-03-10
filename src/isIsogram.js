@@ -11,7 +11,7 @@ function isIsogram(word) {
   for (let i = 0; i < wordToLower.length; i++) {
     const letter = wordToLower[i];
 
-    if (wordToLower.includes(letter, i + 1)) {
+    if (wordToLower.includes(letter, i + 1) || wordToLower.includes(' ')) {
       return false;
     }
   }
