@@ -8,14 +8,14 @@ describe('isIsogram', () => {
   });
 
   it('should return true for an empty string', () => {
-    expect(isIsogram(' ')).toBe(true);
+    expect(isIsogram('')).toBe(true);
   });
 
   it('should return true for string with no repeating small letters', () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
 
-  it('should return false for string with repeating small leters', () => {
+  it('should return false for string with repeating small letters', () => {
     expect(isIsogram('look')).toBe(false);
   });
 
