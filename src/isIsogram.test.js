@@ -18,4 +18,8 @@ describe('isIsogram', () => {
   it(`should return true for empty string`, () => {
     expect(isIsogram('')).toBeTruthy();
   });
+
+  it(`should be case-insensitive`, () => {
+    expect(isIsogram('Adam')).toBeFalsy();
+  });
 });
