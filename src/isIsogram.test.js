@@ -25,12 +25,12 @@ describe('isIsogram', () => {
   );
 
   it(
-    'should return true for the long word, e.g. Transitions',
+    'should return false for the long word, e.g. Transitions',
     () => {
       expect(isIsogram('Transitions'))
-        .toEqual(true);
+        .toEqual(false);
     }
-  );
+  );  
 
   it(
     'should return true for the empty string',
