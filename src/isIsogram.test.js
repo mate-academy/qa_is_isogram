@@ -39,4 +39,11 @@ describe('isIsogram', () => {
         .toEqual(true);
     }
   );
+
+  it(
+    'should return false for the word with uppercase letters',
+    () => {
+      expect(isIsogram('Adam')).toBe(false);
+    }
+  )
 });
