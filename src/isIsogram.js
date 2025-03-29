@@ -6,6 +6,10 @@
  * @returns {boolean}
  */
 function isIsogram(word) {
+  if (typeof word !== 'string') {
+    throw new Error('Please write a word');
+  }
+
   const wordToLower = word.toLowerCase();
 
   for (let i = 0; i < wordToLower.length; i++) {
