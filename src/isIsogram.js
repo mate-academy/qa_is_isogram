@@ -6,17 +6,17 @@
  * @returns {boolean}
  */
 function isIsogram(word) {
-  const wordToLower = word.toLowerCase();
+  const lowerCasedWord = word.toLowerCase(); // Convert the word to lowercase
+  const letters = new Set();
 
-  for (let i = 0; i < wordToLower.length; i++) {
-    const letter = wordToLower[i];
-
-    if (wordToLower.includes(letter, i + 1)) {
-      return false;
+  for (const char of lowerCasedWord) {
+    if (letters.has(char)) {
+      return false; // Return false if a duplicate letter is found
     }
+    letters.add(char);
   }
 
-  return true;
+  return true; // If no duplicates are found, return true
 }
 
 module.exports = { isIsogram };
