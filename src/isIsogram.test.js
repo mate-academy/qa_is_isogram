@@ -37,7 +37,7 @@ describe('isIsogram', () => {
     expect(result).toBeTruthy();
   });
 
-  it(`should be true for 'Oops'`, () => {
+  it(`should be false for 'Oops'`, () => {
     const result = isIsogram('Oops');
 
     expect(result).toBeFalsy();
