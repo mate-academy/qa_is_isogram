@@ -1,0 +1,67 @@
+const { isIsogram } = require('./isIsogram');  
+
+describe('isIsogram', () => {
+  // Basic Cases
+  it('should return true for "programming"', () => {
+    const result = isIsogram('programming');
+    expect(result).toBe(true);
+  });
+
+  it('should return false for "hello"', () => {
+    const result = isIsogram('hello');
+    expect(result).toBe(false);
+  });
+
+  it('should return true for "alphabet"', () => {
+    const result = isIsogram('alphabet');
+    expect(result).toBe(true);
+  });
+
+  // Edge Cases
+  it('should return true for empty string', () => {
+    const result = isIsogram('');
+    expect(result).toBe(true);
+  });
+
+  it('should return true for single letter "a"', () => {
+    const result = isIsogram('a');
+    expect(result).toBe(true);
+  });
+
+  it('should return true for very long non-repeating word', () => {
+    const result = isIsogram('abcdefghijklmnopqrstuvwxyz');
+    expect(result).toBe(true);
+  });
+
+  // Case Insensitivity
+  it('should return false for "Anaconda"', () => {
+    const result = isIsogram('Anaconda');
+    expect(result).toBe(false);
+  });
+
+  it('should return false for "MoM"', () => {
+    const result = isIsogram('MoM');
+    expect(result).toBe(false);
+  });
+
+  it('should return true for "Racecar"', () => {
+    const result = isIsogram('Racecar');
+    expect(result).toBe(true);
+  });
+
+  // Random Cases
+  it('should return true for "QuickBrownFoxJumpedOverTheLazyDog"', () => {
+    const result = isIsogram('QuickBrownFoxJumpedOverTheLazyDog');
+    expect(result).toBe(true);
+  });
+
+  it('should return false for "DuplicateWordWithDuplicates"', () => {
+    const result = isIsogram('DuplicateWordWithDuplicates');
+    expect(result).toBe(false);
+  });
+
+  it('should return false for "XYZzyx"', () => {
+    const result = isIsogram('XYZzyx');
+    expect(result).toBe(false);
+  });
+});
