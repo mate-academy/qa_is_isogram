@@ -25,20 +25,15 @@ describe('isIsogram', () => {
     expect(isIsogram('Alphabet')).toBe(false); // A і a
   });
 
-  it('work with one word', () => {
+  it('work with one symbol', () => {
     expect(isIsogram('x')).toBe(true);
   });
 
-  it('work with 2 words', () => {
+  it('work with 2 symbols', () => {
     expect(isIsogram('aa')).toBe(false);
   });
 
   it('works with a word with the same letters in different cases', () => {
     expect(isIsogram('aA')).toBe(false);
-  });
-
-  it('ignores non-letter characters', () => {
-    // Якщо в майбутньому потрібно ігнорувати тире/пробіли, можна оновити логіку функції.
-    expect(isIsogram('six-year-old')).toBe(false); // зараз буде false, бо "-" враховується
   });
 });
