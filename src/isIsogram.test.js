@@ -15,11 +15,11 @@ describe('isIsogram', () => {
     expect(isIsogram('look')).toBe(false);
   });
 
-  it('should return false for a word with no repeating letters', () => {
+  it('should return false for a different registrs', () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 
-  it('should return true for a word with no repeating letters', () => {
+  it('should return true for an empty string', () => {
     expect(isIsogram('')).toBe(true);
   });
 });
