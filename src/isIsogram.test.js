@@ -31,7 +31,7 @@ describe('isIsogram', () => {
     expect(isIsogram('Dermatoglyphics')).toBe(true);
   });
 
-  it('should return true for "aba" (contains duplicate "a")', () => {
+  it('should return false for "aba" (contains duplicate "a")', () => {
     expect(isIsogram('aba')).toBe(false);
   });
 
