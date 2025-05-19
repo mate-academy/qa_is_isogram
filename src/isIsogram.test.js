@@ -7,13 +7,13 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it(`should return fasel for 'hello'`, () => {
+  it(`should return false for 'hello'`, () => {
     const result = isIsogram('hello');
 
     expect(result).toBe(false);
   });
 
-  it(`should return fasel for 'moOse'`, () => {
+  it(`should return false for 'moOse'`, () => {
     const result = isIsogram('moOse');
 
     expect(result).toBe(false);
