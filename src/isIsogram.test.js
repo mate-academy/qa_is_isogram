@@ -26,4 +26,5 @@ describe('isIsogram', () => {
   test('The function should return true if (`Them`)', () => {
     expect(isIsogram('Them')).toBe(true);
   });
+  
 });
