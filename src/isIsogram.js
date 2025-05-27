@@ -1,22 +1,22 @@
 'use strict';
 
 /**
- * @param {string} word
+ * @param {number} cents
  *
- * @returns {boolean}
+ * @returns {number[]}
  */
-function isIsogram(word) {
-  const wordToLower = word.toLowerCase();
+function getCoinCombination(cents) {
+  let remaining = cents;
 
-  for (let i = 0; i < wordToLower.length; i++) {
-    const letter = wordToLower[i];
+  const values = [1, 5, 10, 25];
+  const coins = [0, 0, 0, 0];
 
-    if (wordToLower.includes(letter, i + 1)) {
-      return false;
-    }
+  for (let i = 3; i >= 0; i--) {
+    coins[i] = Math.floor(remaining / values[i]);
+    remaining -= coins[i] * values[i];
   }
 
-  return true;
+  return coins;
 }
 
-module.exports = { isIsogram };
+module.exports = { getCoinCombination };
