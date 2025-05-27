@@ -36,7 +36,7 @@ describe('isIsogram', () => {
   });
 
   it('should return true for a long isogram with mixed case', () => {
-    expect(isIsogram('Unforgivable')).toBeTruthy();
+    expect(isIsogram('Ambidextrously')).toBeTruthy();
   });
 
   it('should return false for a word with all identical letters', () => {
