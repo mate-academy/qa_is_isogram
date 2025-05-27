@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @param {string} word
+ * @param {string}word
  *
  * @returns {boolean}
  */
