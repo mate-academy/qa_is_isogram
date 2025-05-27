@@ -1,5 +1,12 @@
 'use strict';
 
+/*
+isIsogram('playgrounds') === true
+isIsogram('look') === false
+isIsogram('Adam') === false
+isIsogram('') === true
+isIsogram('Oops') === false
+*/
 /**
  * @param {string} word
  *
