@@ -15,16 +15,15 @@ describe('isIsogram', () => {
     expect(isIsogram(`playgrounds`)).toBe(true);
   });
 
-  test('The function should return true if (`look`)', () => {
+  test('The function should return false if (`look`)', () => {
     expect(isIsogram('look')).toBe(false);
   });
 
-  test('The function should return true if (`Adam`)', () => {
+  test('The function should return false if (`Adam`)', () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 
   test('The function should return true if (`Them`)', () => {
     expect(isIsogram('Them')).toBe(true);
   });
-  
 });
