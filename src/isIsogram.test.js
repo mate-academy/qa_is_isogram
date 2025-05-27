@@ -16,6 +16,6 @@ describe('isIsogram', () => {
   });
 
   it(`should cheks empty as isogram`, () => {
-    expect(isIsogram('Adam')).toBeFalsy();
+    expect(isIsogram('')).toBeTruthy();
   });
 });
