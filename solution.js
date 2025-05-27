@@ -13,7 +13,6 @@ function isIsogram(word) {
   return true;
 }
 
-
 describe('isIsogram', () => {
   test('should return true for a word with no repeating letters (e.g., "playgrounds")', () => {
     expect(isIsogram('playgrounds')).toBe(true);
