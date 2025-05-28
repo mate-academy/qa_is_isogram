@@ -14,7 +14,7 @@ function isIsogram(word) {
     if (wordToLower.includes(letter, i + 1)) {
       return false;
     }
-  }
+  } 
 
   return true;
 }
