@@ -26,4 +26,5 @@ describe('isIsogram', () => {
   it(`should return true for an empty message`, () => {
     expect(isIsogram('')).toBe(true);
   });
+  
 });
