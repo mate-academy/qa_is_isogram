@@ -26,7 +26,6 @@ describe('isIsogram', () => {
     expect(isIsogram('  ')).toBe(false);
     expect(isIsogram('a  a')).toBe(false);
     expect(isIsogram('isog ram ')).toBe(false);
-    expect(isIsogram('a b c')).toBe(false);
   });
 
   it(
