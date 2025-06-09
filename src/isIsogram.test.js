@@ -3,13 +3,12 @@
 describe('isIsogram', () => {
   const { isIsogram } = require('./isIsogram');
 
-  it('should be declared', () => {
+  it(`should be declared`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
   it('returns true for word with all unique letters ("playgrounds")',
-    () => {
-      expect(isIsogram('playgrounds')).toBe(true);
+    () => { expect(isIsogram('playgrounds')).toBe(true);
     });
 
   it('returns false for word with repeated letters ("look")',
