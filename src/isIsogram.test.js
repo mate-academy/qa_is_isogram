@@ -22,4 +22,9 @@ describe('isIsogram', () => {
   it('should return false for non-isogram', () => {
     expect(isIsogram('eleven')).toBe(false);
   });
+
+  it('should get error for non-string', () => {
+    expect(() => isIsogram(1)).toThrowError(TypeError,
+      'word.toLowerCase is not a function');
+  });
 });
