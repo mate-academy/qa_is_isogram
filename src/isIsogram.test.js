@@ -19,7 +19,7 @@ describe('isIsogram', () => {
     expect(isIsogram('look')).toBeFalsy();
   });
 
-  it(`should be return true when word contain
+  it(`should be return false when word contain
      the same letters in different register`, () => {
     expect(isIsogram('Oops')).toBeFalsy();
   });
