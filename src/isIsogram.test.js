@@ -33,6 +33,6 @@ describe('isIsogram', () => {
   });
 
   test('should return true for a long isogram word with mixed case', () => {
-    expect(isIsogram('Background')).toBe(true);
+    expect(isIsogram('Thumbscrew')).toBe(true); // sau 'Subdermatoglyphic'
   });
 });
