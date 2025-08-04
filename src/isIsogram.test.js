@@ -11,10 +11,6 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it(`should return true for an empty string`, () => {
-    expect(isIsogram('')).toBe(true);
-  });
-
   it('should return true for a word with all unique letters', () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
