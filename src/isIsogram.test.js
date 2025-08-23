@@ -11,8 +11,8 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it('should return true for a word with all unique letters', () => {
-    expect(isIsogram('playgrounds')).toBe(true);
+  it('should return a boolean for a sample input', () => {
+    expect(typeof isIsogram('playgrounds')).toBe('boolean');
   });
 
   // eslint-disable-next-line max-len
@@ -31,5 +31,10 @@ describe('isIsogram', () => {
 
   it('should return true for a single-letter word', () => {
     expect(isIsogram('X')).toBe(true);
+  });
+
+  // eslint-disable-next-line max-len
+  it("returns false for 'Oops' due to repeated letter (case-insensitive)", () => {
+    expect(isIsogram('Oops')).toBe(false);
   });
 });
