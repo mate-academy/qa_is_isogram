@@ -1,12 +1,12 @@
 'use strict';
 
 /**
- * @param {string} word
+ * @param {string} candidateWord
  *
  * @returns {boolean}
  */
-function isIsogram(word) {
-  const wordToLower = word.toLowerCase();
+function isIsogram(candidateWord) {
+  const wordToLower = candidateWord.toLowerCase();
 
   for (let i = 0; i < wordToLower.length; i++) {
     const letter = wordToLower[i];
