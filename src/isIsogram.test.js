@@ -1,13 +1,14 @@
+/* eslint-disable max-len */
 'use strict';
 
 describe('isIsogram', () => {
   const { isIsogram } = require('./isIsogram');
 
-  it(`should be declared`, () => {
+  it('should be declared', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it(`should return true for an empty string`, () => {
+  it('should return true for an empty string', () => {
     expect(isIsogram('')).toBe(true);
   });
 
@@ -19,7 +20,17 @@ describe('isIsogram', () => {
     expect(isIsogram('look')).toBe(false);
   });
 
-  it('should return false for a word with UpperCase letters', () => {
-    expect(isIsogram('Adam')).toBe(false);
-  });
+  it(
+    "should return false for a word with repeated letters in different cases (case-insensitive) - 'Adam'",
+    () => {
+      expect(isIsogram('Adam')).toBe(false);
+    }
+  );
+
+  it(
+    "should return false for a word with repeating letters in different cases (non-consecutive) - 'Oops'",
+    () => {
+      expect(isIsogram('Oops')).toBe(false);
+    }
+  );
 });
