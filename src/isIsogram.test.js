@@ -11,11 +11,11 @@ describe('isIsogram', () => {
     expect(typeof isIsogram('word')).toBe('boolean');
   });
 
-  it(`should return true for isogram`, () => {
+  it(`should return true for a word without repeating letters`, () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
 
-  it(`should return false for is not isogram`, () => {
+  it(`should return false for a word with repeating letters`, () => {
     expect(isIsogram('look')).toBe(false);
   });
 
@@ -23,13 +23,11 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it(`should return true for empty string`, () => {
-    expect(isIsogram('playgrounds')).toBe(true);
+  it('returns false for "Adam" (case-insensitive)', () => {
+    expect(isIsogram('Adam')).toBe(false);
   });
 
-  it(`should return false if one of lettet is big`
-    + `and next duble of this letter is small`, () => {
-    expect(isIsogram('Adam')).toBe(false);
+  it('returns false for "Oops" (case-insensitive)', () => {
     expect(isIsogram('Oops')).toBe(false);
   });
 });
