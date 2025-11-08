@@ -12,6 +12,9 @@ describe('isIsogram', () => {
     {
       case: 'Adam', expect: false,
     },
+    {
+      case: 'Oops', expect: false,
+    },
   ];
 
   it(`should be declared`, () => {
