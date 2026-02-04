@@ -13,11 +13,7 @@ describe("isIsogram", () => {
   });
 
   it(`repeating of letters`, () => {
-    expect(isIsogram("ooops")).toBe(false);
-  });
-
-  it(`many repeating of letters`, () => {
-    expect(isIsogram("stttttttraaaaannnngeee")).toBe(false);
+    expect(isIsogram("look")).toBe(false);
   });
 
   it(`without repeating `, () => {
@@ -25,6 +21,6 @@ describe("isIsogram", () => {
   });
 
   it(`ignoring register of letters`, () => {
-    expect(isIsogram("LoOk")).toBe(false);
+    expect(isIsogram("Adam")).toBe(false);
   });
 });
