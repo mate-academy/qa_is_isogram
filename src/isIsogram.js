@@ -6,17 +6,12 @@
  * @returns {boolean}
  */
 function isIsogram(word) {
-  const wordToLower = word.toLowerCase();
+  const lower = word.toLowerCase();
+  const letters = new Set(lower);
 
-  for (let i = 0; i < wordToLower.length; i++) {
-    const letter = wordToLower[i];
-
-    if (wordToLower.includes(letter, i + 1)) {
-      return false;
-    }
-  }
-
-  return true;
+  return letters.size === lower.length;
 }
 
-module.exports = { isIsogram };
+module.exports = {
+  isIsogram,
+};
