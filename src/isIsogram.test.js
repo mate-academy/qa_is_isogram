@@ -6,4 +6,20 @@ describe('isIsogram', () => {
   it(`should be declared`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
+
+  it(`should return 'true' for correct isogram`, () => {
+    expect(isIsogram('playgrounds')).toBeTruthy();
+  });
+
+  it(`should return 'false' for double letters`, () => {
+    expect(isIsogram('look')).toBeFalsy();
+  });
+
+  it(`should return 'false' for case-sensitive double letters`, () => {
+    expect(isIsogram('Adam')).toBeFalsy();
+  });
+
+  it(`should return 'true' for empty string`, () => {
+    expect(isIsogram('')).toBeTruthy();
+  });
 });
