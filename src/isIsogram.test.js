@@ -10,7 +10,7 @@ describe('isIsogram', () => {
   it(`should return a Boolean`, () => {
     const result = isIsogram('');
 
-    expect(result).toBeInstanceOf(Boolean);
+    expect(typeof result).toBe('boolean');
   });
 
   it(`should return true for an empty string`, () => {
@@ -27,7 +27,7 @@ describe('isIsogram', () => {
 
   it(`should return true for an isogram`, () => {
     expect(isIsogram('playgrounds')).toBe(true);
-    expect(isIsogram('abcdefghigklmnopqrstuvwxyz')).toBe(true);
+    expect(isIsogram('abcdefghijklmnopqrstuvwxyz')).toBe(true);
   });
 
   it(`should return false for non-isogram`, () => {
