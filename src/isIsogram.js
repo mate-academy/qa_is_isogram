@@ -6,12 +6,12 @@
  * @returns {boolean}
  */
 function isIsogram(word) {
-  const wordToLower = word.toLowerCase();
+  const lowerCased = word.toLowerCase();
 
-  for (let i = 0; i < wordToLower.length; i++) {
-    const letter = wordToLower[i];
+  for (let i = 0; i < lowerCased.length; i++) {
+    const letter = lowerCased[i];
 
-    if (wordToLower.includes(letter, i + 1)) {
+    if (lowerCased.indexOf(letter, i + 1) !== -1) {
       return false;
     }
   }
