@@ -22,4 +22,8 @@ describe('isIsogram', () => {
   test('should return false forletter in different cases', () => {
     expect(isIsogram('Adam')).toBe(false);
   });
+
+  test('should return false for letters in different cases', () => {
+    expect(isIsogram('Oops')).toBe(false);
+  });
 })
