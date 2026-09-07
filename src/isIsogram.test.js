@@ -31,9 +31,10 @@ describe('isIsogram', () => {
     expect(result).toBe(true);
   });
 
-  it('should return false for a word with repeated non-consecutive letters', () => {
-    const result = isIsogram('Oops');
+  it('should return false for a word with repeated non-consecutive letters',
+    () => {
+      const result = isIsogram('Oops');
 
-    expect(result).toBe(false);
-  });
+      expect(result).toBe(false);
+    });
 });
