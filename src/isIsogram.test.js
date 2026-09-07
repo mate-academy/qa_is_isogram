@@ -36,7 +36,7 @@ describe('isIsogram', () => {
   });
 
   it(
-    'should return false for a word with repeated non-consecutive letters',
+    'should return false for repeated letters',
     () => {
       const result = isIsogram('Oops');
 
