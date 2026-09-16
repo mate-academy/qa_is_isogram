@@ -23,7 +23,7 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it(`accepts empty string`, () => {
+  it(`rejects duplicate letters (case-insensitive)`, () => {
     expect(isIsogram('Oops')).toBe(false);
   });
 });
