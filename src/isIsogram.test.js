@@ -8,18 +8,22 @@ describe('isIsogram', () => {
   });
 
   it(`accepts unique letters`, () => {
-    expect(isIsogram('playgrounds')).toBeTruthy();
+    expect(isIsogram('playgrounds')).toBe(true);
   });
 
   it(`rejects repeated consecutive letters`, () => {
-    expect(isIsogram('look')).toBeFalsy();
+    expect(isIsogram('look')).toBe(false);
   });
 
   it(`rejects duplicate letters regardless of case`, () => {
-    expect(isIsogram('Adam')).toBeFalsy();
+    expect(isIsogram('Adam')).toBe(false);
   });
 
   it(`accepts empty string`, () => {
-    expect(isIsogram('')).toBeTruthy();
+    expect(isIsogram('')).toBe(true);
+  });
+
+  it(`accepts empty string`, () => {
+    expect(isIsogram('Oops')).toBe(false);
   });
 });
