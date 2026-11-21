@@ -42,4 +42,10 @@ describe('isIsogram', () => {
 
     expect(result).toBe(false);
   });
+
+  it('should be case-insensitive "Oo"', () => {
+    const result = isIsogram('Oops');
+
+    expect(result).toBe(false);
+  });
 });
