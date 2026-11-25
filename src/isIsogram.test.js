@@ -18,4 +18,20 @@ describe('isIsogram', () => {
   it('should return true for the isogram', () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
+
+  it(
+    'should should return false for a word' +
+      +'where two letters, with diff case, stand next to each other ',
+    () => {
+      expect(isIsogram('Oops')).toBe(false);
+    },
+  );
+
+  it(
+    'should should return false for a word' +
+      +'where two letters, with same case, stand next to each other ',
+    () => {
+      expect(isIsogram('look')).toBe(false);
+    },
+  );
 });
